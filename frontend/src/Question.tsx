@@ -2,10 +2,21 @@ import { useEffect, useState } from 'react'
 
 const API_BASE = 'http://localhost:8000'
 
+interface QuestionData {
+  id: number
+  question: string
+  options: string[]
+}
+
+interface AnswerResult {
+  correct: boolean
+  correct_answer: number
+}
+
 function Question() {
-  const [question, setQuestion] = useState(null)
-  const [selected, setSelected] = useState(null)
-  const [result, setResult] = useState(null)
+  const [question, setQuestion] = useState<QuestionData | null>(null)
+  const [selected, setSelected] = useState<number | null>(null)
+  const [result, setResult] = useState<AnswerResult | null>(null)
   const [loading, setLoading] = useState(true)
 
   const loadQuestion = () => {
@@ -14,7 +25,7 @@ function Question() {
     setResult(null)
     fetch(`${API_BASE}/questions/random`)
       .then((res) => res.json())
-      .then((data) => setQuestion(data))
+      .then((data: QuestionData) => setQuestion(data))
       .finally(() => setLoading(false))
   }
 
@@ -22,8 +33,8 @@ function Question() {
     loadQuestion()
   }, [])
 
-  const submitAnswer = (index) => {
-    if (result) return
+  const submitAnswer = (index: number) => {
+    if (result || !question) return
     setSelected(index)
     fetch(`${API_BASE}/questions/${question.id}/answer`, {
       method: 'POST',
@@ -31,10 +42,10 @@ function Question() {
       body: JSON.stringify({ selected: index }),
     })
       .then((res) => res.json())
-      .then((data) => setResult(data))
+      .then((data: AnswerResult) => setResult(data))
   }
 
-  const optionClassName = (index) => {
+  const optionClassName = (index: number) => {
     if (!result) return 'option'
     if (index === result.correct_answer) return 'option correct'
     if (index === selected) return 'option incorrect'
