@@ -1,33 +1,84 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useEffect, useState } from 'react'
 import './App.css'
 
+const API_BASE = 'http://localhost:8000'
+
 function App() {
-  const [count, setCount] = useState(0)
+  const [question, setQuestion] = useState(null)
+  const [selected, setSelected] = useState(null)
+  const [result, setResult] = useState(null)
+  const [loading, setLoading] = useState(true)
+
+  const loadQuestion = () => {
+    setLoading(true)
+    setSelected(null)
+    setResult(null)
+    fetch(`${API_BASE}/questions/random`)
+      .then((res) => res.json())
+      .then((data) => setQuestion(data))
+      .finally(() => setLoading(false))
+  }
+
+  useEffect(() => {
+    loadQuestion()
+  }, [])
+
+  const submitAnswer = (index) => {
+    if (result) return
+    setSelected(index)
+    fetch(`${API_BASE}/questions/${question.id}/answer`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ selected: index }),
+    })
+      .then((res) => res.json())
+      .then((data) => setResult(data))
+  }
+
+  const optionClassName = (index) => {
+    if (!result) return 'option'
+    if (index === result.correct_answer) return 'option correct'
+    if (index === selected) return 'option incorrect'
+    return 'option'
+  }
+
+  if (loading || !question) {
+    return (
+      <>
+        <h1>Anatomy Quiz</h1>
+        <p>Loading question...</p>
+      </>
+    )
+  }
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
+      <h1>Anatomy Quiz</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+        <p className="question">{question.question}</p>
+        <div className="options">
+          {question.options.map((option, index) => (
+            <button
+              key={index}
+              className={optionClassName(index)}
+              onClick={() => submitAnswer(index)}
+              disabled={Boolean(result)}
+            >
+              {option}
+            </button>
+          ))}
+        </div>
+        {result && (
+          <p className={result.correct ? 'feedback correct' : 'feedback incorrect'}>
+            {result.correct ? 'Correct!' : 'Incorrect.'}
+          </p>
+        )}
+        {result && (
+          <button className="next" onClick={loadQuestion}>
+            Next question
+          </button>
+        )}
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }
