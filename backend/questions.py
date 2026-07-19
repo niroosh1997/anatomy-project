@@ -6,7 +6,13 @@ QUESTIONS = [
         "question": "לאיזה מהשרירים הבאים Origin או Insertion ב- Greater Trochanter?",
         "options": ["Iliopsoas", "Gluteus Medius", "Hamstrings", "Gluteus Maximuse"],
         "answer": 1,
-        "anatomy_components": ["Iliopsoas", "Gluteus Medius", "Hamstrings", "Gluteus Maximus"],
+        "anatomy_components": [
+            "Iliopsoas",
+            "Gluteus Medius",
+            "Hamstrings",
+            "Gluteus Maximus",
+            "Greater Trochanter",
+        ],
     },
     {
         "id": 2,
@@ -34,7 +40,13 @@ QUESTIONS = [
         "question": "איזה שריר מהבאים מתחבר אל Coracoid process?",
         "options": ["Coracobrachialis", "Brachialis", "Triceps", "Supraspinatus"],
         "answer": 0,
-        "anatomy_components": ["Coracobrachialis", "Brachialis", "Triceps", "Supraspinatus"],
+        "anatomy_components": [
+            "Coracobrachialis",
+            "Brachialis",
+            "Triceps",
+            "Supraspinatus",
+            "Coracoid Process",
+        ],
     },
     {
         "id": 4,
@@ -85,6 +97,7 @@ QUESTIONS = [
             "Flexor Digitorum Longus",
             "Brachioradialis",
             "Flexor Pollicis Longus",
+            "Phalang 1",
         ],
     },
     {
