@@ -20,6 +20,7 @@ class QuestionPublic(BaseModel):
     id: int
     question: str
     options: list[str]
+    anatomy_components: list[str]
 
 
 class AnswerSubmission(BaseModel):

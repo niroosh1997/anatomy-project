@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const API_BASE = 'http://localhost:8000'
 
@@ -6,6 +7,7 @@ interface QuestionData {
   id: number
   question: string
   options: string[]
+  anatomy_components: string[]
 }
 
 interface AnswerResult {
@@ -75,6 +77,18 @@ function Question() {
         <p className={result.correct ? 'feedback correct' : 'feedback incorrect'}>
           {result.correct ? 'Correct!' : 'Incorrect.'}
         </p>
+      )}
+      {result && question.anatomy_components.length > 0 && (
+        <div className="anatomy-components">
+          <p>Anatomy in this question:</p>
+          <div className="anatomy-links">
+            {question.anatomy_components.map((name) => (
+              <Link key={name} to={`/anatomy/${encodeURIComponent(name)}`} className="anatomy-link">
+                {name}
+              </Link>
+            ))}
+          </div>
+        </div>
       )}
       {result && (
         <button className="next" onClick={loadQuestion}>

@@ -56,3 +56,33 @@
 .next {
   margin-top: 1rem;
 }
+
+.anatomy-components {
+  margin-top: 1.5rem;
+}
+
+.anatomy-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.anatomy-link {
+  padding: 0.4em 0.9em;
+  border-radius: 999px;
+  background-color: #eef2ff;
+  color: #3730a3;
+  text-decoration: none;
+  font-size: 0.9em;
+}
+
+.anatomy-link:hover {
+  background-color: #e0e7ff;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 1.5rem;
+}
