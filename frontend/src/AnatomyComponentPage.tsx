@@ -15,6 +15,7 @@ function AnatomyComponentPage() {
       {image && (
         <figure className="anatomy-figure">
           <img src={image.src} alt={`Anatomical illustration of ${decodedName}`} />
+          {image.note && <p className="image-note">{image.note}</p>}
           <figcaption>
             {image.author} — {image.license}
             {image.source && (

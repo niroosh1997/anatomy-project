@@ -113,6 +113,13 @@
   background: #fff;
 }
 
+.image-note {
+  margin: 0.5rem auto 0;
+  max-width: 34rem;
+  font-size: 0.85rem;
+  color: #334155;
+}
+
 .anatomy-figure figcaption {
   margin-top: 0.4rem;
   font-size: 0.7rem;

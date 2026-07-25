@@ -8,6 +8,8 @@ export interface AnatomyImage {
   author: string
   license: string
   source: string
+  /** Optional hint for images where several structures are visible at once. */
+  note?: string
 }
 
 export const anatomyImages: Record<string, AnatomyImage> = {
@@ -54,10 +56,11 @@ export const anatomyImages: Record<string, AnatomyImage> = {
     source: 'https://commons.wikimedia.org/wiki/File:1120_Muscles_that_Move_the_Forearm_Humerus_Flex_Sin.png',
   },
   Brachialis: {
-    src: '/anatomy/musclesant-rieuresdubras.png',
-    author: 'Adrien Charpy',
-    license: 'Public domain',
-    source: 'https://commons.wikimedia.org/wiki/File:MusclesAnt%C3%A9rieuresDuBras.jpg',
+    src: '/anatomy/brachialis-muscle01.png',
+    author: 'Anatomography',
+    license: 'CC BY-SA 2.1 jp',
+    source: 'https://commons.wikimedia.org/wiki/File:Brachialis_muscle01.png',
+    note: 'Brachialis is the muscle highlighted in red, deep to the biceps on the front of the upper arm.',
   },
   Brachioradialis: {
     src: '/anatomy/brachioradialis.png',
@@ -120,10 +123,10 @@ export const anatomyImages: Record<string, AnatomyImage> = {
     source: 'https://commons.wikimedia.org/wiki/File:Inferior_view_of_flexor_digitorum_longus_muscle_-_animation.gif',
   },
   'Flexor Pollicis Longus': {
-    src: '/anatomy/musculaturaprodundadelantebrazo.png',
-    author: 'George A. Piersol',
+    src: '/anatomy/musculus-flexor-pollicis-longus.png',
+    author: "Gray's Anatomy plate, highlighted by a Wikimedia contributor",
     license: 'Public domain',
-    source: 'https://commons.wikimedia.org/wiki/File:MusculaturaProdundaDelAntebrazo.jpg',
+    source: 'https://commons.wikimedia.org/wiki/File:Musculus_flexor_pollicis_longus.png',
   },
   'Gluteus Maximus': {
     src: '/anatomy/gluteus-maximus-3d.png',
@@ -306,10 +309,10 @@ export const anatomyImages: Record<string, AnatomyImage> = {
     source: 'https://commons.wikimedia.org/wiki/File:Semitendinosus.png',
   },
   'Serratus Anterior': {
-    src: '/anatomy/serratusmagnus.png',
-    author: 'Leo Testut',
-    license: 'Public domain',
-    source: 'https://commons.wikimedia.org/wiki/File:SerratusMagnus.jpg',
+    src: '/anatomy/serratus-anterior-muscles-lateral.png',
+    author: 'Anatomography (background whitened)',
+    license: 'CC BY-SA 2.1 jp',
+    source: 'https://commons.wikimedia.org/wiki/File:Serratus_anterior_muscles_lateral.png',
   },
   'Sternoclavicular Joint': {
     src: '/anatomy/gray325.png',
