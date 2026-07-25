@@ -61,7 +61,7 @@ requires indicating changes. No anatomical content was altered.
 | Radius | `radius-anterior-view2.png` | Anatomography | CC BY-SA 2.1 jp | [Commons](https://commons.wikimedia.org/wiki/File:Radius_-_anterior_view2.png) |
 | Rectus Abdominis | `rectus-abdominis.png` | Unknown | CC BY-SA 3.0 | [Commons](https://commons.wikimedia.org/wiki/File:Rectus_abdominis.png) |
 | Rhomboid | `rhomboidei.png` | Mikael Häggström | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Rhomboidei.PNG) |
-| Semimembranosus | `semimembranosus-muscle.png` | Mikael Häggström | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Semimembranosus_muscle.PNG) |
+| Semimembranosus | `semimembranosus.png` | BodyParts3D/Anatomography (frame extracted from animation, background removed) | CC BY-SA 2.1 jp | [Commons](https://commons.wikimedia.org/wiki/File:Semimembranosus.gif) |
 | Semitendinosus | `semitendinosus.png` | BodyParts3D/Anatomography | CC BY-SA 2.1 jp | [Commons](https://commons.wikimedia.org/wiki/File:Semitendinosus.png) |
 | Serratus Anterior | `serratus-anterior-muscles-lateral.png` | Anatomography (background whitened) | CC BY-SA 2.1 jp | [Commons](https://commons.wikimedia.org/wiki/File:Serratus_anterior_muscles_lateral.png) |
 | Sternoclavicular Joint | `gray325.png` | Henry Vandyke Carter | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Gray325.png) |

@@ -301,10 +301,10 @@ export const anatomyImages: Record<string, AnatomyImage> = {
     source: 'https://commons.wikimedia.org/wiki/File:Rhomboidei.PNG',
   },
   Semimembranosus: {
-    src: '/anatomy/semimembranosus-muscle.png',
-    author: 'Mikael Häggström',
-    license: 'Public domain',
-    source: 'https://commons.wikimedia.org/wiki/File:Semimembranosus_muscle.PNG',
+    src: '/anatomy/semimembranosus.png',
+    author: 'BodyParts3D/Anatomography',
+    license: 'CC BY-SA 2.1 jp',
+    source: 'https://commons.wikimedia.org/wiki/File:Semimembranosus.gif',
   },
   Semitendinosus: {
     src: '/anatomy/semitendinosus.png',
