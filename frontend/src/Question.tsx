@@ -17,11 +17,19 @@ function Question() {
 
   return (
     <div className="card">
-      <p className="question">{question.question}</p>
+      {/* The questions are Hebrew with embedded Latin anatomy terms. The page
+          itself is English (LTR), so without an explicit base direction the
+          bidi algorithm lays the runs out left-to-right and scrambles the
+          sentence order. Options are mixed Hebrew/Latin, so let each one
+          pick its own direction. */}
+      <p className="question" dir="rtl">
+        {question.question}
+      </p>
       <div className="options">
         {question.options.map((option, index) => (
           <button
             key={index}
+            dir="auto"
             className={optionClassName(index)}
             onClick={() => submitAnswer(index)}
             disabled={Boolean(result)}
