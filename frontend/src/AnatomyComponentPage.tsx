@@ -1,16 +1,33 @@
 import { Link, useParams } from 'react-router-dom'
 import { anatomyData } from './anatomyData'
-import { boneDiagrams } from './boneDiagrams'
+import { anatomyImages } from './anatomyImages'
 
 function AnatomyComponentPage() {
   const { name = '' } = useParams<{ name: string }>()
   const decodedName = decodeURIComponent(name)
   const entry = anatomyData[decodedName]
+  const image = anatomyImages[decodedName]
 
   return (
     <div className="card">
       <h2>{decodedName}</h2>
       {!entry && <p>Details coming soon.</p>}
+      {image && (
+        <figure className="anatomy-figure">
+          <img src={image.src} alt={`Anatomical illustration of ${decodedName}`} />
+          <figcaption>
+            {image.author} — {image.license}
+            {image.source && (
+              <>
+                {' · '}
+                <a href={image.source} target="_blank" rel="noreferrer">
+                  source
+                </a>
+              </>
+            )}
+          </figcaption>
+        </figure>
+      )}
       {entry?.type === 'muscle' && (
         <dl className="anatomy-fields">
           <dt>Origin</dt>
@@ -41,12 +58,7 @@ function AnatomyComponentPage() {
           <dd>{entry.connects}</dd>
         </dl>
       )}
-      {entry?.type === 'bone' && (
-        <>
-          <p>{entry.description}</p>
-          {boneDiagrams[decodedName] && <div className="bone-diagram">{boneDiagrams[decodedName]}</div>}
-        </>
-      )}
+      {entry?.type === 'bone' && <p>{entry.description}</p>}
       <Link to="/" className="back-link">
         Back to quiz
       </Link>
