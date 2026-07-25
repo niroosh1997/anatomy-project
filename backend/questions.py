@@ -11,6 +11,11 @@
 #             "?"/":" moved to the end (28 of the 43 stems stored it first,
 #             having been typed in a right-to-left field). The author's joke
 #             final question was dropped as it is not anatomy.
+#   ids 66-73 Kahoot "שרירים - רפואת הספורט למדריכים" by the same author, same
+#             API source and same normalisations. Two of its ten questions ask
+#             about an attached picture hosted on Kahoot with no licence
+#             information; they were left out rather than commit an unlicensed
+#             image, since without it they cannot be answered.
 QUESTIONS = [
     {
         "id": 1,
@@ -665,5 +670,61 @@ QUESTIONS = [
         ],
         "answer": 3,
         "anatomy_components": ["Gluteus Medius", "Serratus Anterior", "Tibialis Anterior"],
+    },
+    {
+        "id": 66,
+        "question": "מהו השריר העיקרי המרחיק כתף?",
+        "options": ["Pectoralis Major", "Quadriceps", "Deltoid", "Hamstrings"],
+        "answer": 2,
+        "anatomy_components": ["Deltoid", "Hamstrings", "Pectoralis Major", "Quadriceps"],
+    },
+    {
+        "id": 67,
+        "question": "למי מהשרירים הבאים יש יותר מגיד אחד בנקודת ההתחלה?",
+        "options": ["Biceps Brachii", "Quadriceps", "Triceps", "כל התשובות נכונות"],
+        "answer": 3,
+        "anatomy_components": ["Biceps Brachii", "Quadriceps", "Triceps"],
+    },
+    {
+        "id": 68,
+        "question": "הפעולה העיקרית של שרירי ה- Hamstrings היא:",
+        "options": ["פשיטה במפרק הברך", "הרחקה במפרק ירך", "כפיפה במפרק הברך", "כפיפה במפרק כתף"],
+        "answer": 2,
+        "anatomy_components": ["Hamstrings"],
+    },
+    {
+        "id": 69,
+        "question": "מי מהשרירים הבאים מבצע קירוב אופקי במפרק הכתף?",
+        "options": ["Gastrocnemius", "Gluteus Medius", "Pectoralis Major", "Triceps"],
+        "answer": 2,
+        "anatomy_components": ["Gluteus Medius", "Pectoralis Major", "Triceps"],
+    },
+    {
+        "id": 70,
+        "question": "מי מהשרירים שלמדת מקרב שכמות אל עמוד השדרה?",
+        "options": ["Rectus Abdominis", "Trapezius", "Hamstrings", "Quadriceps"],
+        "answer": 1,
+        "anatomy_components": ["Hamstrings", "Quadriceps", "Rectus Abdominis", "Trapezius"],
+    },
+    {
+        "id": 71,
+        "question": "מי משרירי הבטן מכופף את הגו?",
+        "options": ["Transverse Abdominis", "External Oblique", "Rectus Abdominis", "Internal Oblique"],
+        "answer": 2,
+        "anatomy_components": ["External Oblique", "Internal Oblique", "Rectus Abdominis"],
+    },
+    {
+        "id": 72,
+        "question": "מי מהשרירים שלמדת פושט ברך ומכופף ירך?",
+        "options": ["Hamstrings", "Biceps Brachii", "Rectus Femoris", "Long head of triceps"],
+        "answer": 2,
+        "anatomy_components": ["Biceps Brachii", "Hamstrings", "Triceps"],
+    },
+    {
+        "id": 73,
+        "question": "מה מסוגל לבצע ה- Long head of Triceps?",
+        "options": ["כפיפת כתף", "פשיטת כתף ופשיטת כתף", "הרחקת כתף", "קירוב אופקי בכתף"],
+        "answer": 1,
+        "anatomy_components": ["Triceps"],
     },
 ]
