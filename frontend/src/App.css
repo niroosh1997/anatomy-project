@@ -86,3 +86,24 @@
   display: inline-block;
   margin-top: 1.5rem;
 }
+
+.anatomy-fields {
+  text-align: left;
+  margin-top: 1.5rem;
+}
+
+.anatomy-fields dt {
+  font-weight: 600;
+  color: #3730a3;
+  margin-top: 0.75rem;
+}
+
+.anatomy-fields dd {
+  margin: 0.15rem 0 0;
+}
+
+.bone-diagram {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
