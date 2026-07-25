@@ -226,6 +226,36 @@ export const anatomyData: Record<string, AnatomyEntry> = {
     insertion: 'Medial lip of the intertubercular groove of the humerus.',
     action: 'Shoulder extension, adduction, and internal rotation.',
   },
+  'Extensor Digitorum': {
+    type: 'muscle',
+    origin: 'Lateral epicondyle of the humerus (common extensor origin).',
+    insertion: 'Extensor expansions of the middle and distal phalanges of digits 2–5.',
+    action: 'Extends the fingers at the metacarpophalangeal and interphalangeal joints; assists wrist extension.',
+  },
+  'Abductor Pollicis Brevis': {
+    type: 'muscle',
+    origin: 'Flexor retinaculum, scaphoid, and trapezium.',
+    insertion: 'Lateral side of the base of the proximal phalanx of the thumb.',
+    action: 'Abducts the thumb at the carpometacarpal and metacarpophalangeal joints.',
+  },
+  'Flexor Carpi Ulnaris': {
+    type: 'muscle',
+    origin: 'Medial epicondyle of the humerus (common flexor origin) and the posterior border of the ulna.',
+    insertion: 'Pisiform, hook of the hamate, and base of the 5th metacarpal.',
+    action: 'Wrist flexion and ulnar deviation (adduction) of the wrist.',
+  },
+  Supinator: {
+    type: 'muscle',
+    origin: 'Lateral epicondyle of the humerus, the annular and radial collateral ligaments, and the supinator crest of the ulna.',
+    insertion: 'Proximal lateral surface of the radius — note it ends on the radius, not the ulna.',
+    action: 'Supinates the forearm.',
+  },
+  'Pronator Teres': {
+    type: 'muscle',
+    origin: 'Medial epicondyle of the humerus and the coronoid process of the ulna.',
+    insertion: 'Lateral surface of the mid-shaft of the radius — it ends on the radius, not the ulna.',
+    action: 'Pronates the forearm; assists elbow flexion.',
+  },
 
   // Joints
   'Ankle Joint': {
@@ -410,5 +440,25 @@ export const anatomyData: Record<string, AnatomyEntry> = {
     type: 'bone',
     description:
       'One of the two forearm bones, on the thumb side, that rotates around the ulna to allow pronation and supination.',
+  },
+  Ulna: {
+    type: 'bone',
+    description:
+      'The forearm bone on the little-finger side. Its olecranon and trochlear notch form the main hinge with the humerus at the elbow. It does not articulate with the carpal bones at the radiocarpal joint.',
+  },
+  Scaphoid: {
+    type: 'bone',
+    description:
+      'Boat-shaped carpal bone in the proximal row on the thumb side. It articulates with the radius and is part of the radiocarpal joint; also the most commonly fractured carpal bone.',
+  },
+  Lunate: {
+    type: 'bone',
+    description:
+      'Crescent-shaped carpal bone in the proximal row, sitting between the scaphoid and triquetrum. It articulates with the radius and is part of the radiocarpal joint.',
+  },
+  'Metacarpal 2': {
+    type: 'bone',
+    description:
+      'The metacarpal of the index finger, in the palm. It sits distal to the carpal bones, so it belongs to the carpometacarpal joint — not the radiocarpal joint.',
   },
 }

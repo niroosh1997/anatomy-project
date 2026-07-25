@@ -3,18 +3,19 @@
 Every anatomical image in `frontend/public/anatomy/` comes from Wikimedia Commons.
 They are stored locally so the app does not depend on any external host.
 
-Licence spread across the 58 image files used:
+Licence spread across the 67 image files used:
 
-- Public domain: 25
-- CC BY-SA 2.1 jp: 16
+- Public domain: 27
+- CC BY-SA 2.1 jp: 22
 - CC BY-SA 3.0: 11
+- CC0: 3
 - CC BY-SA 4.0: 2
-- CC0: 2
 - CC BY 3.0: 2
 
-Some files were adjusted (flat background whitened, or a muscle tinted for
-emphasis) so they read clearly; these are flagged in the author column, as CC BY-SA
-requires indicating changes. No anatomical content was altered.
+Some files were adjusted (flat background whitened, a muscle tinted for emphasis,
+or downscaled) so they read clearly at display size; adjustments are flagged in the
+author column, as CC BY-SA requires indicating changes. No anatomical content was
+altered.
 
 | Used for | File | Author | Licence | Source |
 |---|---|---|---|---|
@@ -61,7 +62,7 @@ requires indicating changes. No anatomical content was altered.
 | Radius | `radius-anterior-view2.png` | Anatomography | CC BY-SA 2.1 jp | [Commons](https://commons.wikimedia.org/wiki/File:Radius_-_anterior_view2.png) |
 | Rectus Abdominis | `rectus-abdominis.png` | Unknown | CC BY-SA 3.0 | [Commons](https://commons.wikimedia.org/wiki/File:Rectus_abdominis.png) |
 | Rhomboid | `rhomboidei.png` | Mikael Häggström | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Rhomboidei.PNG) |
-| Semimembranosus | `semimembranosus.png` | BodyParts3D/Anatomography (frame extracted from animation, background removed) | CC BY-SA 2.1 jp | [Commons](https://commons.wikimedia.org/wiki/File:Semimembranosus.gif) |
+| Semimembranosus | `semimembranosus.png` | BodyParts3D/Anatomography | CC BY-SA 2.1 jp | [Commons](https://commons.wikimedia.org/wiki/File:Semimembranosus.gif) |
 | Semitendinosus | `semitendinosus.png` | BodyParts3D/Anatomography | CC BY-SA 2.1 jp | [Commons](https://commons.wikimedia.org/wiki/File:Semitendinosus.png) |
 | Serratus Anterior | `serratus-anterior-muscles-lateral.png` | Anatomography (background whitened) | CC BY-SA 2.1 jp | [Commons](https://commons.wikimedia.org/wiki/File:Serratus_anterior_muscles_lateral.png) |
 | Sternoclavicular Joint | `gray325.png` | Henry Vandyke Carter | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Gray325.png) |
@@ -76,3 +77,12 @@ requires indicating changes. No anatomical content was altered.
 | Tibiofemoral Joint | `blausen-0597-kneeanatomy-side.png` | BruceBlaus | CC BY 3.0 | [Commons](https://commons.wikimedia.org/wiki/File:Blausen_0597_KneeAnatomy_Side.png) |
 | Trapezius | `trapezius.png` | Unknown | CC BY-SA 3.0 | [Commons](https://commons.wikimedia.org/wiki/File:Trapezius.png) |
 | Triceps | `triceps-brachii.png` | Unknown | CC BY-SA 3.0 | [Commons](https://commons.wikimedia.org/wiki/File:Triceps_brachii.png) |
+| Extensor Digitorum | `extensor-digitorum-muscle.png` | Mikael Häggström. When using this image in external works, it may be c | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Extensor_digitorum_muscle.png) |
+| Abductor Pollicis Brevis | `musculus-abductor-pollicis-brevis-red.png` | Arent | CC0 | [Commons](https://commons.wikimedia.org/wiki/File:Musculus_abductor_pollicis_brevis_-_red.png) |
+| Flexor Carpi Ulnaris | `gray-musculus-flexor-carpi-ulnaris.png` | Henry Vandyke Carter | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Gray_%E2%80%94_musculus_flexor_carpi_ulnaris.png) |
+| Supinator | `gray-musculus-supinator.png` | Henry Vandyke Carter | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Gray_%E2%80%94_musculus_supinator.png) |
+| Pronator Teres | `gray-musculus-pronator-teres.png` | Henry Vandyke Carter | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Gray_%E2%80%94_musculus_pronator_teres.png) |
+| Ulna | `ulna-anterior-view.png` | Anatomography | CC BY-SA 2.1 jp | [Commons](https://commons.wikimedia.org/wiki/File:Ulna_-_anterior_view.png) |
+| Scaphoid | `scaphoid-bone-left-hand-01-palmar-view.png` | BodyParts3D is made by DBCLS. | CC BY-SA 2.1 jp | [Commons](https://commons.wikimedia.org/wiki/File:Scaphoid_bone_(left_hand)_01_palmar_view.png) |
+| Lunate | `lunate-bone-left-hand-01-palmar-view.png` | BodyParts3D is made by DBCLS. | CC BY-SA 2.1 jp | [Commons](https://commons.wikimedia.org/wiki/File:Lunate_bone_(left_hand)_01_palmar_view.png) |
+| Metacarpal 2 | `second-metacarpal-bone-left-hand-01-palmar-view.png` | BodyParts3D is made by DBCLS. | CC BY-SA 2.1 jp | [Commons](https://commons.wikimedia.org/wiki/File:Second_metacarpal_bone_(left_hand)_01_palmar_view.png) |

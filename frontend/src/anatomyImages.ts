@@ -390,4 +390,58 @@ export const anatomyImages: Record<string, AnatomyImage> = {
     license: 'CC BY-SA 3.0',
     source: 'https://commons.wikimedia.org/wiki/File:Triceps_brachii.png',
   },
+  'Extensor Digitorum': {
+    src: '/anatomy/extensor-digitorum-muscle.png',
+    author: 'Mikael Häggström. When using this image in external works, it may be c',
+    license: 'Public domain',
+    source: 'https://commons.wikimedia.org/wiki/File:Extensor_digitorum_muscle.png',
+  },
+  'Abductor Pollicis Brevis': {
+    src: '/anatomy/musculus-abductor-pollicis-brevis-red.png',
+    author: 'Arent',
+    license: 'CC0',
+    source: 'https://commons.wikimedia.org/wiki/File:Musculus_abductor_pollicis_brevis_-_red.png',
+  },
+  'Flexor Carpi Ulnaris': {
+    src: '/anatomy/gray-musculus-flexor-carpi-ulnaris.png',
+    author: 'Henry Vandyke Carter',
+    license: 'Public domain',
+    source: 'https://commons.wikimedia.org/wiki/File:Gray_%E2%80%94_musculus_flexor_carpi_ulnaris.png',
+  },
+  Supinator: {
+    src: '/anatomy/gray-musculus-supinator.png',
+    author: 'Henry Vandyke Carter',
+    license: 'Public domain',
+    source: 'https://commons.wikimedia.org/wiki/File:Gray_%E2%80%94_musculus_supinator.png',
+  },
+  'Pronator Teres': {
+    src: '/anatomy/gray-musculus-pronator-teres.png',
+    author: 'Henry Vandyke Carter',
+    license: 'Public domain',
+    source: 'https://commons.wikimedia.org/wiki/File:Gray_%E2%80%94_musculus_pronator_teres.png',
+  },
+  Ulna: {
+    src: '/anatomy/ulna-anterior-view.png',
+    author: 'Anatomography',
+    license: 'CC BY-SA 2.1 jp',
+    source: 'https://commons.wikimedia.org/wiki/File:Ulna_-_anterior_view.png',
+  },
+  Scaphoid: {
+    src: '/anatomy/scaphoid-bone-left-hand-01-palmar-view.png',
+    author: 'BodyParts3D is made by DBCLS.',
+    license: 'CC BY-SA 2.1 jp',
+    source: 'https://commons.wikimedia.org/wiki/File:Scaphoid_bone_(left_hand)_01_palmar_view.png',
+  },
+  Lunate: {
+    src: '/anatomy/lunate-bone-left-hand-01-palmar-view.png',
+    author: 'BodyParts3D is made by DBCLS.',
+    license: 'CC BY-SA 2.1 jp',
+    source: 'https://commons.wikimedia.org/wiki/File:Lunate_bone_(left_hand)_01_palmar_view.png',
+  },
+  'Metacarpal 2': {
+    src: '/anatomy/second-metacarpal-bone-left-hand-01-palmar-view.png',
+    author: 'BodyParts3D is made by DBCLS.',
+    license: 'CC BY-SA 2.1 jp',
+    source: 'https://commons.wikimedia.org/wiki/File:Second_metacarpal_bone_(left_hand)_01_palmar_view.png',
+  },
 }

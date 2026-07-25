@@ -1,5 +1,9 @@
 # -*- coding: utf-8 -*-
-# Source: "אנטומיה ב' - שאלות אמריקאיות לתרגול - 97509.pdf"
+# Sources:
+#   ids 1-20  "אנטומיה ב' - שאלות אמריקאיות לתרגול - 97509.pdf" (answer key included)
+#   ids 21-23 "אנטומיה ב' - שאלות חזרה ותרגול - 97508.pdf" — the multiple-choice
+#             questions on p.6. That document ships no answer key, so those
+#             three answers are derived from standard anatomy, not transcribed.
 QUESTIONS = [
     {
         "id": 1,
@@ -229,5 +233,48 @@ QUESTIONS = [
         "options": ["Posterior Deltoid", "Teres Major", "Teres Minor", "Serratus Anterior"],
         "answer": 3,
         "anatomy_components": ["Posterior Deltoid", "Teres Major", "Teres Minor", "Serratus Anterior"],
+    },
+    {
+        "id": 21,
+        "question": "מי מהשרירים הבאים מניע את האגודל?",
+        "options": [
+            "Flexor Indicis",
+            "Extensor Digitorum",
+            "Abductor Pollicis Brevis",
+            "Flexor Carpi Ulnaris",
+        ],
+        "answer": 2,
+        # "Flexor Indicis" is not a real named muscle, so it gets no page.
+        "anatomy_components": [
+            "Extensor Digitorum",
+            "Abductor Pollicis Brevis",
+            "Flexor Carpi Ulnaris",
+        ],
+    },
+    {
+        "id": 22,
+        "question": "מי מהשרירים הבאים מסתיים ב- ULNA?",
+        "options": ["Biceps Brachii", "Brachialis", "Supinator", "Pronator Teres"],
+        "answer": 1,
+        "anatomy_components": [
+            "Biceps Brachii",
+            "Brachialis",
+            "Supinator",
+            "Pronator Teres",
+            "Ulna",
+        ],
+    },
+    {
+        "id": 23,
+        "question": "מי מהעצמות הבאות לא משתתפת במפרק RADIO-CARPAL JOINT?",
+        "options": ["Lunate", "Scaphoid", "Radius", "Metacarpal 2"],
+        "answer": 3,
+        "anatomy_components": [
+            "Lunate",
+            "Scaphoid",
+            "Radius",
+            "Metacarpal 2",
+            "Radiocarpal Joint",
+        ],
     },
 ]
