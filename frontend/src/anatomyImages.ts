@@ -343,10 +343,10 @@ export const anatomyImages: Record<string, AnatomyImage> = {
     source: 'https://commons.wikimedia.org/wiki/File:Supraspinatus_muscle_back4.png',
   },
   'Teres Major': {
-    src: '/anatomy/teres-major.png',
-    author: 'User:Mikael Häggström',
-    license: 'Public domain',
-    source: 'https://commons.wikimedia.org/wiki/File:Teres_major.PNG',
+    src: '/anatomy/teres-major-muscle-back.png',
+    author: 'Anatomography',
+    license: 'CC BY-SA 2.1 jp',
+    source: 'https://commons.wikimedia.org/wiki/File:Teres_major_muscle_back.png',
   },
   'Teres Minor': {
     src: '/anatomy/teres-minor-muscle-back3.png',

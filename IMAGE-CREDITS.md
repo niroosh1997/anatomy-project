@@ -68,7 +68,7 @@ requires indicating changes. No anatomical content was altered.
 | Subscapularis | `subscapularis-muscle-frontal.png` | Anatomography | CC BY-SA 2.1 jp | [Commons](https://commons.wikimedia.org/wiki/File:Subscapularis_muscle_frontal.png) |
 | Subtalar Joint | `subtalar-joint.png` | Unknown | CC BY-SA 3.0 | [Commons](https://commons.wikimedia.org/wiki/File:Subtalar_Joint.svg) |
 | Supraspinatus | `supraspinatus-muscle-back4.png` | Anatomography | CC BY-SA 2.1 jp | [Commons](https://commons.wikimedia.org/wiki/File:Supraspinatus_muscle_back4.png) |
-| Teres Major | `teres-major.png` | User:Mikael Häggström | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Teres_major.PNG) |
+| Teres Major | `teres-major-muscle-back.png` | Anatomography | CC BY-SA 2.1 jp | [Commons](https://commons.wikimedia.org/wiki/File:Teres_major_muscle_back.png) |
 | Teres Minor | `teres-minor-muscle-back3.png` | Anatomography | CC BY-SA 2.1 jp | [Commons](https://commons.wikimedia.org/wiki/File:Teres_minor_muscle_back3.png) |
 | Tibia | `tibia-frontal-view.png` | Anatomography | CC BY-SA 2.1 jp | [Commons](https://commons.wikimedia.org/wiki/File:Tibia_-_frontal_view.png) |
 | Tibialis Anterior | `tibialis.png` | Bildberabetning: sv:Användare:Chrizz. Original uploader was Chrizz at sv.wikipedia | CC BY-SA 3.0 | [Commons](https://commons.wikimedia.org/wiki/File:Tibialis.png) |
