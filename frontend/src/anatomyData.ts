@@ -625,4 +625,76 @@ export const anatomyData: Record<string, AnatomyEntry> = {
     type: 'bone',
     description: 'The largest and most superior of the three bones that fuse to form the hip bone (os coxae), consisting of a body that contributes the superior two-fifths of the acetabulum and a broad flared ala whose upper margin is the iliac crest. Its gluteal surface gives origin to the gluteal muscles, its iliac fossa to iliacus, and its auricular surface articulates with the sacrum at the sacroiliac joint.',
   },
+  'Glenohumeral Joint': {
+    type: 'joint',
+    bones: ['Head of humerus', 'Glenoid cavity (glenoid fossa) of the scapula'],
+    jointType: 'Synovial',
+    classification: 'Ball and Socket',
+    axis: 'Triaxial (multiaxial)',
+    actions: ['Flexion', 'Extension', 'Abduction', 'Adduction', 'Medial (internal) rotation', 'Lateral (external) rotation', 'Circumduction', 'Horizontal flexion and extension'],
+  },
+  'Talocrural Joint': {
+    type: 'joint',
+    bones: ['Distal tibia (including the medial malleolus)', 'Distal fibula (lateral malleolus)', 'Trochlea (body) of the talus'],
+    jointType: 'Synovial',
+    classification: 'Hinge (ginglymus)',
+    axis: 'Uniaxial',
+    actions: ['Dorsiflexion', 'Plantarflexion'],
+  },
+  'CMC 1 Joint': {
+    type: 'joint',
+    bones: ['Trapezium', 'Base of the first metacarpal'],
+    jointType: 'Synovial',
+    classification: 'Saddle (sellar)',
+    axis: 'Biaxial',
+    actions: ['Flexion', 'Extension', 'Abduction', 'Adduction', 'Opposition', 'Reposition', 'Circumduction'],
+  },
+  'MTP 1 Joint': {
+    type: 'joint',
+    bones: ['Head of the first metatarsal', 'Base of the proximal phalanx of the hallux (great toe)', 'Two sesamoid bones in the flexor hallucis brevis tendons'],
+    jointType: 'Synovial',
+    classification: 'Condyloid (ellipsoid)',
+    axis: 'Biaxial',
+    actions: ['Flexion (plantarflexion)', 'Extension (dorsiflexion)', 'Abduction', 'Adduction', 'Limited circumduction'],
+  },
+  ACL: {
+    type: 'ligament',
+    connects: 'The anterior cruciate ligament runs from the anterior intercondylar area of the tibial plateau upwards, backwards and laterally to the posteromedial aspect of the lateral femoral condyle, and it resists anterior translation of the tibia on the femur (as well as knee hyperextension and excessive internal rotation of the tibia) - the movement assessed by the Lachman and anterior drawer tests.',
+  },
+  ATFL: {
+    type: 'ligament',
+    connects: 'The anterior talofibular ligament lies on the LATERAL (outer) side of the ankle, joining the anterior margin of the lateral malleolus of the fibula to the neck of the talus, and it resists inversion and anterior translation of the talus, especially when the foot is plantarflexed; it is the weakest of the three lateral collateral ligaments and the ligament most commonly injured in the body - the structure torn in the ordinary inversion \'sprained ankle\'.',
+  },
+  'Deltoid Ligament': {
+    type: 'ligament',
+    connects: 'The deltoid (medial collateral) ligament is a strong triangular ligament on the MEDIAL (inner) side of the ankle, fanning out from the medial malleolus of the tibia to the talus, the calcaneus (via the sustentaculum tali) and the navicular, and it resists eversion of the foot and excessive external rotation of the talus; it is injured far less often than the lateral ligaments, and is so strong that forced eversion tends to avulse the medial malleolus rather than tear it.',
+  },
+  'Coracohumeral Ligament': {
+    type: 'ligament',
+    connects: 'The coracohumeral ligament passes from the lateral border of the coracoid process of the scapula to the greater and lesser tubercles of the humerus, blending with the joint capsule and the supraspinatus and subscapularis tendons, and it supports the weight of the hanging upper limb, chiefly resisting inferior translation (downward subluxation) of the humeral head and external rotation of the adducted arm.',
+  },
+  'Iliofemoral Ligament': {
+    type: 'ligament',
+    connects: 'The iliofemoral ligament (the Y-shaped ligament of Bigelow) runs from the anterior inferior iliac spine and the rim of the acetabulum to the intertrochanteric line of the femur, and it resists extension of the hip and, with the other capsular ligaments, lateral rotation - it is the strongest ligament in the body and lets us stand upright with almost no muscular effort by screwing the femoral head into the acetabulum.',
+  },
+  'Glenohumeral Ligament': {
+    type: 'ligament',
+    connects: 'The glenohumeral ligaments are three thickenings of the anterior fibrous capsule of the shoulder - superior, middle and inferior - passing from the glenoid rim and labrum of the scapula to the anatomical neck and lesser tubercle of the humerus, and they are the main static anterior restraints of the joint; the inferior glenohumeral ligament in particular resists anterior dislocation when the arm is abducted and externally rotated, and avulsion of its anterior band with the labrum is the Bankart lesion.',
+  },
+  'Trochanteric Bursa': {
+    type: 'bone',
+    description: 'A synovial fluid-filled sac lying between the greater trochanter of the femur and the overlying gluteus maximus tendon and iliotibial band, allowing them to glide smoothly over the bony prominence. When irritated it causes trochanteric bursitis - lateral hip pain that is tender over the greater trochanter and typically worse when lying on that side; this is now usually described as part of greater trochanteric pain syndrome, since gluteal tendinopathy is often the real culprit.',
+  },
+  'Prepatellar Bursa': {
+    type: 'bone',
+    description: 'A small subcutaneous sac lying between the skin and the anterior surface of the patella, which lets the skin glide freely over the kneecap during flexion and extension. It is the bursa irritated by prolonged or repeated KNEELING - prepatellar bursitis, classically called housemaid\'s knee (also carpet-layer\'s or carpenter\'s knee).',
+  },
+  'Suprapatellar Bursa': {
+    type: 'bone',
+    description: 'A large synovial sac (the suprapatellar pouch) lying between the distal femur and the quadriceps femoris tendon, extending roughly 3-5 cm above the upper border of the patella. It communicates freely with the cavity of the knee joint, so it fills and distends in a knee effusion or haemarthrosis, and it is the space normally entered when the knee is aspirated or injected.',
+  },
+  'Subacromial Bursa': {
+    type: 'bone',
+    description: 'A sac lying between the acromion and coracoacromial arch above and the supraspinatus tendon and shoulder joint capsule below, continuous laterally with the subdeltoid bursa (the two are usually a single subacromial-subdeltoid bursa). It cushions the rotator cuff as it passes under the arch during abduction; when it is inflamed or compressed the result is subacromial impingement, with a painful arc typically between about 60 and 120 degrees of abduction.',
+  },
 }
