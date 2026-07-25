@@ -106,11 +106,11 @@ export const anatomyImages: Record<string, AnatomyImage> = {
     source: 'https://commons.wikimedia.org/wiki/File:Gray421.png',
   },
   'External Oblique': {
-    src: '/anatomy/gray392.png',
-    author: 'Henry Vandyke Carter',
-    license: 'Public domain',
-    source: 'https://commons.wikimedia.org/wiki/File:Gray392.png',
-    note: 'Anterolateral view of the abdominal wall. The external oblique is the large muscle labelled OBLIQUUS EXTERNUS across its own belly.',
+    src: '/anatomy/grays-anatomy-muscle-oblique-externe.png',
+    author: 'Henry Vandyke Carter (external oblique tinted for emphasis)',
+    license: 'CC0',
+    source: 'https://commons.wikimedia.org/wiki/File:Grays_Anatomy_Muscle_oblique_externe.png',
+    note: 'The external oblique is the muscle shaded darker red, with OBLIQUUS EXTERNUS labelled across it. It is the outermost of the three flat abdominal wall muscles.',
   },
   Femur: {
     src: '/anatomy/femur-anterior-view2.png',
@@ -172,6 +172,7 @@ export const anatomyImages: Record<string, AnatomyImage> = {
     author: 'Henry Vandyke Carter',
     license: 'Public domain',
     source: 'https://commons.wikimedia.org/wiki/File:Gray395.png',
+    note: 'OBLIQUUS INTERNUS is labelled across the muscle belly. This layer sits directly beneath the external oblique, exposed here with the external oblique removed.',
   },
   LCL: {
     src: '/anatomy/gray348.png',
