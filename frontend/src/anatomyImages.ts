@@ -32,10 +32,10 @@ export const anatomyImages: Record<string, AnatomyImage> = {
     source: 'https://commons.wikimedia.org/wiki/File:Ankle_en.svg',
   },
   'Annular Ligament': {
-    src: '/anatomy/gray333.png',
+    src: '/anatomy/en-elbow-joint.png',
     author: 'Henry Vandyke Carter',
     license: 'Public domain',
-    source: 'https://commons.wikimedia.org/wiki/File:Gray333.png',
+    source: 'https://commons.wikimedia.org/wiki/File:En-elbow_joint.svg',
   },
   'Anterior Deltoid': {
     src: '/anatomy/deltoideus.png',
@@ -69,10 +69,11 @@ export const anatomyImages: Record<string, AnatomyImage> = {
     source: 'https://commons.wikimedia.org/wiki/File:Brachioradialis.png',
   },
   'C1-C2 Joint': {
-    src: '/anatomy/gray304.png',
+    src: '/anatomy/gray306.png',
     author: 'Henry Vandyke Carter',
     license: 'Public domain',
-    source: 'https://commons.wikimedia.org/wiki/File:Gray304.png',
+    source: 'https://commons.wikimedia.org/wiki/File:Gray306.png',
+    note: 'The atlas (C1) seen from above. The odontoid process — the peg projecting up from the axis (C2) — is held against the anterior arch by the transverse ligament. C1 and the skull rotate around that peg, which is what makes this a pivot joint.',
   },
   Coracobrachialis: {
     src: '/anatomy/coracobrachialis-muscle05.png',
@@ -105,10 +106,11 @@ export const anatomyImages: Record<string, AnatomyImage> = {
     source: 'https://commons.wikimedia.org/wiki/File:Gray421.png',
   },
   'External Oblique': {
-    src: '/anatomy/illu-trunk-muscles.png',
-    author: 'Unknown',
+    src: '/anatomy/gray392.png',
+    author: 'Henry Vandyke Carter',
     license: 'Public domain',
-    source: 'https://commons.wikimedia.org/wiki/File:Illu_trunk_muscles.jpg',
+    source: 'https://commons.wikimedia.org/wiki/File:Gray392.png',
+    note: 'Anterolateral view of the abdominal wall. The external oblique is the large muscle labelled OBLIQUUS EXTERNUS across its own belly.',
   },
   Femur: {
     src: '/anatomy/femur-anterior-view2.png',
@@ -177,10 +179,10 @@ export const anatomyImages: Record<string, AnatomyImage> = {
     source: 'https://commons.wikimedia.org/wiki/File:Gray348.png',
   },
   'Latissimus Dorsi': {
-    src: '/anatomy/latissimus.png',
-    author: 'Leo Testut',
-    license: 'Public domain',
-    source: 'https://commons.wikimedia.org/wiki/File:Latissimus.jpg',
+    src: '/anatomy/latissimus-dorsi-muscle-back.png',
+    author: 'Anatomography (background whitened)',
+    license: 'CC BY-SA 2.1 jp',
+    source: 'https://commons.wikimedia.org/wiki/File:Latissimus_dorsi_muscle_back.png',
   },
   MCL: {
     src: '/anatomy/knee-medial-view.png',
