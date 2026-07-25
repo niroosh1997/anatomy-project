@@ -3,19 +3,19 @@
 Every anatomical image in `frontend/public/anatomy/` comes from Wikimedia Commons.
 They are stored locally so the app does not depend on any external host.
 
-Licence spread across the 67 image files used:
+Licence spread across the 97 image files used:
 
-- Public domain: 27
-- CC BY-SA 2.1 jp: 22
-- CC BY-SA 3.0: 11
+- Public domain: 37
+- CC BY-SA 2.1 jp: 36
+- CC BY-SA 3.0: 12
+- CC BY-SA 2.1 JP: 4
 - CC0: 3
+- CC BY 3.0: 3
 - CC BY-SA 4.0: 2
-- CC BY 3.0: 2
 
 Some files were adjusted (flat background whitened, a muscle tinted for emphasis,
-or downscaled) so they read clearly at display size; adjustments are flagged in the
-author column, as CC BY-SA requires indicating changes. No anatomical content was
-altered.
+a single frame taken from a rotating render, or downscaled) so they read clearly at
+display size. No anatomical content was altered.
 
 | Used for | File | Author | Licence | Source |
 |---|---|---|---|---|
@@ -86,3 +86,33 @@ altered.
 | Scaphoid | `scaphoid-bone-left-hand-01-palmar-view.png` | BodyParts3D is made by DBCLS. | CC BY-SA 2.1 jp | [Commons](https://commons.wikimedia.org/wiki/File:Scaphoid_bone_(left_hand)_01_palmar_view.png) |
 | Lunate | `lunate-bone-left-hand-01-palmar-view.png` | BodyParts3D is made by DBCLS. | CC BY-SA 2.1 jp | [Commons](https://commons.wikimedia.org/wiki/File:Lunate_bone_(left_hand)_01_palmar_view.png) |
 | Metacarpal 2 | `second-metacarpal-bone-left-hand-01-palmar-view.png` | BodyParts3D is made by DBCLS. | CC BY-SA 2.1 jp | [Commons](https://commons.wikimedia.org/wiki/File:Second_metacarpal_bone_(left_hand)_01_palmar_view.png) |
+| Infraspinatus | `a-infraspinatus-back2.png` | Anatomography (BodyParts3D / DBCLS) | CC BY-SA 2.1 jp | [Commons](https://commons.wikimedia.org/wiki/File:Infraspinatus_muscle_back2.png) |
+| Levator Scapulae | `a-levator-scapulae-lateral.png` | Anatomography (BodyParts3D / DBCLS) | CC BY-SA 2.1 jp | [Commons](https://commons.wikimedia.org/wiki/File:Levator_scapulae_muscle_lateral.png) |
+| Sternocleidomastoid | `a-scm-anatomography.png` | Henry Vandyke Carter (Gray\'s Anatomy plate 385), colourised by Uwe Gille | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Sternocleidomastoideus.png) |
+| Palmaris Longus | `a-palmaris-longus-gray.png` | Henry Vandyke Carter (Gray\'s Anatomy) | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Gray_%E2%80%94_musculus_palmaris_longus.png) |
+| Humerus | `a-humerus-anterior.png` | Anatomography (BodyParts3D / DBCLS) | CC BY-SA 2.1 jp | [Commons](https://commons.wikimedia.org/wiki/File:Humerus_-_anterior_view.png) |
+| Acromion | `a-acromion-left-scapula01.png` | BodyParts3D, made by DBCLS | CC BY-SA 2.1 jp | [Commons](https://commons.wikimedia.org/wiki/File:Acromion_of_left_scapula01.png) |
+| Glenoid Fossa | `a-glenoid-cavity01.png` | BodyParts3D / DBCLS (polygon data) | CC BY-SA 2.1 jp | [Commons](https://commons.wikimedia.org/wiki/File:Glenoid_cavity_of_scapula01.png) |
+| Bicipital Groove | `a-bicipital-groove.png` | Doctor Jana | CC BY-SA 4.0 | [Commons](https://commons.wikimedia.org/wiki/File:Bicipital-groove.jpg) |
+| Spine of Scapula | `a-spine-of-scapula02.png` | BodyParts3D, made by DBCLS | CC BY-SA 2.1 jp | [Commons](https://commons.wikimedia.org/wiki/File:Spine_of_scapula02.png) |
+| Clavicle | `a-clavicle-anterior.png` | Anatomography (BodyParts3D / DBCLS) | CC BY-SA 2.1 jp | [Commons](https://commons.wikimedia.org/wiki/File:Clavicle_-_anterior_view.png) |
+| Transverse Abdominis | `b-transversus-abdominis.png` | Henry Gray, Anatomy of the Human Body (plate Gray397), colourised by Uwe Gille | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Transversus_abdominis.png) |
+| Quadratus Lumborum | `b-quadratus-lumborum.png` | Henry Gray, Anatomy of the Human Body (plate Gray389), colourised by Uwe Gille | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Quadratuslumborum.png) |
+| Longissimus | `b-longissimus.png` | Henry Gray, Anatomy of the Human Body (plate Gray389), colourised by Uwe Gille | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Longissimus.png) |
+| Psoas Major | `b-psoas-major.png` | Henry Gray, Anatomy of the Human Body, colourised by Michael Gasperl | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Psoas-major.png) |
+| Iliacus | `b-iliacus.png` | BodyParts3D/Anatomography (frame taken from the rotating 3D render) | CC BY-SA 2.1 JP | [Commons](https://commons.wikimedia.org/wiki/File:Iliacus.gif) |
+| Gluteus Minimus | `b-gluteus-minimus.png` | BodyParts3D/Anatomography (frame taken from the rotating 3D render) | CC BY-SA 2.1 JP | [Commons](https://commons.wikimedia.org/wiki/File:Gluteus_minimus.gif) |
+| Adductor Brevis | `b-adductor-brevis.png` | BodyParts3D/Anatomography (frame taken from the rotating 3D render) | CC BY-SA 2.1 JP | [Commons](https://commons.wikimedia.org/wiki/File:Adductor_brevis.gif) |
+| Adductor Longus | `b-adductor-longus.png` | BodyParts3D/Anatomography (frame taken from the rotating 3D render) | CC BY-SA 2.1 JP | [Commons](https://commons.wikimedia.org/wiki/File:Adductor_longus.gif) |
+| Tensor Fasciae Latae | `b-tensor-fasciae-latae.png` | Henry Gray, Anatomy of the Human Body (plate Gray549), colourised by Uwe Gille | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Tensor_fasciae_latae.png) |
+| Sartorius | `b-sartorius.png` | Based on \'Illu lower extremity muscles\' (US federal government, public domain), modified by Uwe Gille | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Sartorius.png) |
+| Gastrocnemius | `c-gastrocnemius-posterior.png` | Polygon data generated by Database Center for Life Science (DBCLS) / BodyParts3D, via Anatomography | CC BY-SA 2.1 jp | [Commons](https://commons.wikimedia.org/wiki/File:Gastrocnemius_muscle_-_posterior_view.png) |
+| Soleus | `c-soleus-posterior.png` | Polygon data generated by Database Center for Life Science (DBCLS) / BodyParts3D, via Anatomography | CC BY-SA 2.1 jp | [Commons](https://commons.wikimedia.org/wiki/File:Soleus_muscle_-_posterior_view.png) |
+| Peroneus Longus | `c-peroneus-longus-superior.png` | Polygon data generated by Database Center for Life Science (DBCLS) / BodyParts3D, via Anatomography | CC BY-SA 2.1 jp | [Commons](https://commons.wikimedia.org/wiki/File:Superior_view_fibularis_longus_muscle_-_posterior.png) |
+| Flexor Hallucis Longus | `c-fhl-superior.png` | Polygon data generated by Database Center for Life Science (DBCLS) / BodyParts3D, via Anatomography | CC BY-SA 2.1 jp | [Commons](https://commons.wikimedia.org/wiki/File:Superior_view_of_flexor_hallucis_longus_muscle_-_posterior.png) |
+| Vastus Medialis | `c-vastus-medialis.png` | Henry Vandyke Carter (Gray\'s Anatomy plate), modified/tinted by Uwe Gille | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Vastus_medialis_muscle.png) |
+| Rectus Femoris | `c-rectus-femoris.png` | Henry Vandyke Carter (Gray\'s Anatomy plate), modified/tinted by Uwe Gille | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Rectus_femoris.png) |
+| Iliotibial Band | `c-itb-gray430-en.png` | Jmarchn, after Henry Vandyke Carter (Gray\'s Anatomy plate 430) | CC BY-SA 3.0 | [Commons](https://commons.wikimedia.org/wiki/File:Gray430-en.svg) |
+| Medial Meniscus | `c-medial-meniscus-gray349.png` | Henry Vandyke Carter (Gray\'s Anatomy plate 349) | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Gray349.png) |
+| Knee Joint | `c-knee-joint-917.png` | OpenStax College (Anatomy & Physiology) | CC BY 3.0 | [Commons](https://commons.wikimedia.org/wiki/File:917_Knee_Joint.jpg) |
+| Ilium | `c-ilium-lateral.png` | BodyParts3D, made by Database Center for Life Science (DBCLS), via Anatomography | CC BY-SA 2.1 jp | [Commons](https://commons.wikimedia.org/wiki/File:Ilium_02_lateral_view.png) |
