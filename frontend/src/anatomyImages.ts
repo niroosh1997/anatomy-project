@@ -106,11 +106,11 @@ export const anatomyImages: Record<string, AnatomyImage> = {
     source: 'https://commons.wikimedia.org/wiki/File:Gray421.png',
   },
   'External Oblique': {
-    src: '/anatomy/grays-anatomy-muscle-oblique-externe.png',
-    author: 'Henry Vandyke Carter (external oblique tinted for emphasis)',
+    src: '/anatomy/external-oblique-highlighted.png',
+    author: 'Henry Vandyke Carter (recoloured: external oblique in red, rest of the plate greyed)',
     license: 'CC0',
     source: 'https://commons.wikimedia.org/wiki/File:Grays_Anatomy_Muscle_oblique_externe.png',
-    note: 'The external oblique is the muscle shaded darker red, with OBLIQUUS EXTERNUS labelled across it. It is the outermost of the three flat abdominal wall muscles.',
+    note: 'The external oblique is the muscle highlighted in red, with OBLIQUUS EXTERNUS labelled across it. It is the outermost of the three flat abdominal wall muscles.',
   },
   Femur: {
     src: '/anatomy/femur-anterior-view2.png',
