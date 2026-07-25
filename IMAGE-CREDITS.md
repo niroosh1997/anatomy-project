@@ -25,7 +25,7 @@ altered.
 | Annular Ligament | `en-elbow-joint.png` | Henry Vandyke Carter | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:En-elbow_joint.svg) |
 | Anterior Deltoid, Deltoid, Posterior Deltoid | `deltoideus.png` | Original: sv:Användare:Chrizz | CC BY-SA 3.0 | [Commons](https://commons.wikimedia.org/wiki/File:Deltoideus.png) |
 | Atlanto-Occipital Joint | `gray304.png` | Henry Vandyke Carter | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Gray304.png) |
-| Biceps Brachii | `1120-muscles-that-move-the-forearm-humerus-flex-sin.png` | CFCF | CC BY-SA 4.0 | [Commons](https://commons.wikimedia.org/wiki/File:1120_Muscles_that_Move_the_Forearm_Humerus_Flex_Sin.png) |
+| Biceps Brachii | `biceps-brachii-muscle01.png` | Anatomography (background whitened) | CC BY-SA 2.1 jp | [Commons](https://commons.wikimedia.org/wiki/File:Biceps_brachii_muscle01.png) |
 | Brachialis | `brachialis-muscle01.png` | Anatomography | CC BY-SA 2.1 jp | [Commons](https://commons.wikimedia.org/wiki/File:Brachialis_muscle01.png) |
 | Brachioradialis | `brachioradialis.png` | Henry Vandyke Carter | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Brachioradialis.png) |
 | C1-C2 Joint | `gray306.png` | Henry Vandyke Carter | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Gray306.png) |

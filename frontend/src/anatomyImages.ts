@@ -50,10 +50,11 @@ export const anatomyImages: Record<string, AnatomyImage> = {
     source: 'https://commons.wikimedia.org/wiki/File:Gray304.png',
   },
   'Biceps Brachii': {
-    src: '/anatomy/1120-muscles-that-move-the-forearm-humerus-flex-sin.png',
-    author: 'CFCF',
-    license: 'CC BY-SA 4.0',
-    source: 'https://commons.wikimedia.org/wiki/File:1120_Muscles_that_Move_the_Forearm_Humerus_Flex_Sin.png',
+    src: '/anatomy/biceps-brachii-muscle01.png',
+    author: 'Anatomography (background whitened)',
+    license: 'CC BY-SA 2.1 jp',
+    source: 'https://commons.wikimedia.org/wiki/File:Biceps_brachii_muscle01.png',
+    note: 'Biceps brachii is the muscle in red. Both heads run up to the scapula — the long head over the shoulder joint, the short head to the coracoid process — and the distal tendon attaches below the elbow.',
   },
   Brachialis: {
     src: '/anatomy/brachialis-muscle01.png',
