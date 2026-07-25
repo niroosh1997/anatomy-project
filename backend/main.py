@@ -25,6 +25,10 @@ app.add_middleware(
 )
 
 
+# How many questions make up one round.
+QUIZ_LENGTH = 10
+
+
 class QuestionPublic(BaseModel):
     id: int
     question: str
@@ -46,9 +50,15 @@ def health():
     return {"status": "ok"}
 
 
-@app.get("/questions/random", response_model=QuestionPublic)
-def random_question():
-    return random.choice(QUESTIONS)
+@app.get("/quiz", response_model=list[QuestionPublic])
+def new_quiz():
+    """Deal a round of distinct questions.
+
+    random.sample rather than repeated random.choice so a round never asks the
+    same question twice. The min() guard keeps this working if the bank ever
+    shrinks below QUIZ_LENGTH — sample raises ValueError when k > population.
+    """
+    return random.sample(QUESTIONS, min(QUIZ_LENGTH, len(QUESTIONS)))
 
 
 @app.post("/questions/{question_id}/answer", response_model=AnswerResult)
