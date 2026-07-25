@@ -1,3 +1,4 @@
+import os
 import random
 
 from fastapi import FastAPI, HTTPException
@@ -8,9 +9,17 @@ from questions import QUESTIONS
 
 app = FastAPI()
 
+# Comma-separated origins, set by the deployment; defaults to the Vite dev server.
+# Origins only — scheme + host + port, no trailing path.
+ALLOWED_ORIGINS = [
+    origin.strip()
+    for origin in os.environ.get("ALLOWED_ORIGINS", "http://localhost:5173").split(",")
+    if origin.strip()
+]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],
+    allow_origins=ALLOWED_ORIGINS,
     allow_methods=["*"],
     allow_headers=["*"],
 )

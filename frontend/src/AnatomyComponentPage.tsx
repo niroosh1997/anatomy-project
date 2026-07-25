@@ -14,7 +14,12 @@ function AnatomyComponentPage() {
       {!entry && <p>Details coming soon.</p>}
       {image && (
         <figure className="anatomy-figure">
-          <img src={image.src} alt={`Anatomical illustration of ${decodedName}`} />
+          {/* anatomyImages stores root-absolute paths; prefix BASE_URL so they
+              also resolve when served from a subpath (GitHub Pages). */}
+          <img
+            src={`${import.meta.env.BASE_URL}${image.src.replace(/^\//, '')}`}
+            alt={`Anatomical illustration of ${decodedName}`}
+          />
           {image.note && <p className="image-note">{image.note}</p>}
           <figcaption>
             {image.author} — {image.license}

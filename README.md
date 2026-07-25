@@ -36,6 +36,31 @@ npx tsc --noEmit   # type-check
 npm run lint       # eslint (js/jsx and ts/tsx)
 ```
 
+## Deployment
+
+Pushing to `main` redeploys both halves automatically:
+
+| Part | Host | Config |
+|---|---|---|
+| Frontend | GitHub Pages — https://niroosh1997.github.io/anatomy-project/ | [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) |
+| Backend | Render — https://anatomy-project-api.onrender.com | [`render.yaml`](render.yaml) |
+
+Notes on how this fits together:
+
+- The frontend build sets `base: '/anatomy-project/'` because Pages serves from
+  a subpath. That is applied to builds only, so `npm run dev` still runs at
+  `localhost:5173/`.
+- Routing uses `HashRouter`. Pages has no server-side rewrite, so a real path
+  like `/anatomy/Femur` would 404 on refresh; with a hash the route never
+  reaches the server.
+- The backend URL is injected at build time as `VITE_API_BASE`. Without it the
+  app falls back to `http://localhost:8000` for local development.
+- The backend reads `ALLOWED_ORIGINS` for CORS, defaulting to the Vite dev
+  server. Render sets it to the Pages origin.
+- **The backend sleeps on Render's free tier** after ~15 minutes idle, so the
+  first question after a break can take 30–60 seconds while it wakes. The app
+  shows "Loading question..." during that time.
+
 ## Content accuracy
 
 Question text and the answer key are transcribed from the practice-exam PDF,

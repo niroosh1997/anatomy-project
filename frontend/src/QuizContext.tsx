@@ -1,6 +1,7 @@
 import { createContext, useContext, useEffect, useState, type ReactNode } from 'react'
 
-const API_BASE = 'http://localhost:8000'
+// Set at build time by the deploy workflow; falls back to the local dev server.
+const API_BASE = import.meta.env.VITE_API_BASE ?? 'http://localhost:8000'
 
 interface QuestionData {
   id: number

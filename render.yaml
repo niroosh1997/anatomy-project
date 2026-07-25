@@ -1,0 +1,21 @@
+# Render Blueprint for the FastAPI backend.
+# Render reads this when you create a Blueprint from the repo, and redeploys
+# on every push to main.
+services:
+  - type: web
+    name: anatomy-project-api
+    runtime: python
+    plan: free
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    # 0.0.0.0 and $PORT are both required — binding 127.0.0.1 or a fixed port
+    # makes the service unreachable and the deploy fails its health check.
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    envVars:
+      # Origin only: scheme + host, no path and no trailing slash.
+      - key: ALLOWED_ORIGINS
+        value: https://niroosh1997.github.io
+      # Matches the local venv that requirements.txt was pinned against.
+      - key: PYTHON_VERSION
+        value: 3.11.4
