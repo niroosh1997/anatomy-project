@@ -3,19 +3,23 @@
 Every anatomical image in `frontend/public/anatomy/` comes from Wikimedia Commons.
 They are stored locally so the app does not depend on any external host.
 
-Licence spread across the 97 image files used:
+Licence spread across the 109 image files used:
 
-- Public domain: 37
+- Public domain: 43
 - CC BY-SA 2.1 jp: 36
-- CC BY-SA 3.0: 12
+- CC BY-SA 3.0: 13
+- CC BY 3.0: 7
 - CC BY-SA 2.1 JP: 4
+- CC BY-SA 4.0: 3
 - CC0: 3
-- CC BY 3.0: 3
-- CC BY-SA 4.0: 2
 
-Some files were adjusted (flat background whitened, a muscle tinted for emphasis,
-a single frame taken from a rotating render, or downscaled) so they read clearly at
-display size. No anatomical content was altered.
+Some files were adjusted so they read clearly at display size — a flat background
+whitened, a muscle tinted for emphasis, a single frame taken from a rotating render,
+a panel cropped from a multi-part figure, or simply downscaled. No anatomical content
+was altered.
+
+Two components (MTP 1 Joint, Glenohumeral Ligament) have no image: Commons had nothing
+usable that was not an MRI, a surgical photo, or a photo of a live person.
 
 | Used for | File | Author | Licence | Source |
 |---|---|---|---|---|
@@ -116,3 +120,15 @@ display size. No anatomical content was altered.
 | Medial Meniscus | `c-medial-meniscus-gray349.png` | Henry Vandyke Carter (Gray\'s Anatomy plate 349) | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Gray349.png) |
 | Knee Joint | `c-knee-joint-917.png` | OpenStax College (Anatomy & Physiology) | CC BY 3.0 | [Commons](https://commons.wikimedia.org/wiki/File:917_Knee_Joint.jpg) |
 | Ilium | `c-ilium-lateral.png` | BodyParts3D, made by Database Center for Life Science (DBCLS), via Anatomography | CC BY-SA 2.1 jp | [Commons](https://commons.wikimedia.org/wiki/File:Ilium_02_lateral_view.png) |
+| Glenohumeral Joint | `d-glenohumeral-joint.png` | OpenStax College | CC BY 3.0 | [Commons](https://commons.wikimedia.org/wiki/File:914_Shoulder_Joint.jpg) |
+| Talocrural Joint | `d-talocrural-joint.png` | OpenStax College | CC BY 3.0 | [Commons](https://commons.wikimedia.org/wiki/File:919_Ankle_Feet_Joints.jpg) |
+| CMC 1 Joint | `d-cmc-1-joint.png` | OpenStax College | CC BY 3.0 | [Commons](https://commons.wikimedia.org/wiki/File:909_Types_of_Synovial_Joints.jpg) |
+| ACL | `d-acl.png` | Mysid | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Knee_diagram.svg) |
+| ATFL | `d-atfl.png` | Jak (SVG version of File:Ankle.PNG) | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Ankle_en.svg) |
+| Deltoid Ligament | `d-deltoid-ligament.png` | Henry Vandyke Carter (Gray\'s Anatomy, plate 354) | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Gray354.png) |
+| Coracohumeral Ligament | `d-coracohumeral-ligament.png` | Henry Vandyke Carter (Gray\'s Anatomy, plate 326) | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Gray326.png) |
+| Iliofemoral Ligament | `d-iliofemoral-ligament.png` | Henry Vandyke Carter (Gray\'s Anatomy, plate 339) | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Gray339.png) |
+| Trochanteric Bursa | `d-trochanteric-bursa.png` | Hariadhi | CC BY-SA 4.0 | [Commons](https://commons.wikimedia.org/wiki/File:Greater_trochanteric_pain_syndrome_by_Hariadhi.svg) |
+| Prepatellar Bursa | `d-prepatellar-bursa.png` | Mikael Haggstrom | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Prepatellar_bursa_(vector).svg) |
+| Suprapatellar Bursa | `d-suprapatellar-bursa.png` | Addingrefs | CC BY-SA 3.0 | [Commons](https://commons.wikimedia.org/wiki/File:Knee-unfolding-recess-diagram.svg) |
+| Subacromial Bursa | `d-subacromial-bursa.png` | OpenStax College | CC BY 3.0 | [Commons](https://commons.wikimedia.org/wiki/File:914_Shoulder_Joint.jpg) |

@@ -266,14 +266,14 @@ QUESTIONS = [
         "question": "מי מהמפרקים הבאים הוא חלק ממפרקי חגורת הכתפיים?",
         "options": ["Radio-ulnar joint", "Knee joint", "Gleno-humeral joint", "Patello-femoral joint"],
         "answer": 2,
-        "anatomy_components": ["Knee Joint", "Patellofemoral Joint", "Radioulnar Joint"],
+        "anatomy_components": ["Glenohumeral Joint", "Knee Joint", "Patellofemoral Joint", "Radioulnar Joint"],
     },
     {
         "id": 25,
         "question": "מי מהבאים מייצב את הכתף בצורה פאסיבית?",
         "options": ["P.C.L", "Supraspinatus", "Meniscus", "Glenohumeral Ligament"],
         "answer": 3,
-        "anatomy_components": ["PCL", "Supraspinatus"],
+        "anatomy_components": ["Glenohumeral Ligament", "PCL", "Supraspinatus"],
     },
     {
         "id": 26,
@@ -344,7 +344,7 @@ QUESTIONS = [
             "Tibialis Anterior בעלייה על קצות הבהונות השריר שעובד הוא",
         ],
         "answer": 1,
-        "anatomy_components": ["Deltoid", "Tibialis Anterior"],
+        "anatomy_components": ["Deltoid", "Deltoid Ligament", "MTP 1 Joint", "Tibialis Anterior"],
     },
     {
         "id": 34,
@@ -410,7 +410,7 @@ QUESTIONS = [
         "question": "איזו רצועה מהבאות שייכת למפרק כתף?",
         "options": ["A.C.L", "Coracohumeral Ligament", "M.C.L", "Iliofemoral Ligament"],
         "answer": 1,
-        "anatomy_components": ["MCL"],
+        "anatomy_components": ["ACL", "Coracohumeral Ligament", "Iliofemoral Ligament", "MCL"],
     },
     {
         "id": 42,
@@ -439,7 +439,7 @@ QUESTIONS = [
         "question": "מי מהבאים מייצב את מפרק הברך?",
         "options": ["Gluteus Minimus", "Psoas Major", "A.C.L + P.C.L", "Patella"],
         "answer": 2,
-        "anatomy_components": ["Gluteus Minimus", "PCL", "Patella", "Psoas Major"],
+        "anatomy_components": ["ACL", "Gluteus Minimus", "PCL", "Patella", "Psoas Major"],
     },
     {
         "id": 44,
@@ -503,7 +503,7 @@ QUESTIONS = [
         "question": "מהי הבורסה העלולה להינזק מעמידה ממושכת על הברכיים?",
         "options": ["Trochanteric Bursa", "Prepatellar Bursa", "Suprapatellar Bursa", "Subacromial Bursa"],
         "answer": 1,
-        "anatomy_components": [],
+        "anatomy_components": ["Prepatellar Bursa", "Subacromial Bursa", "Suprapatellar Bursa", "Trochanteric Bursa"],
     },
     {
         "id": 50,
@@ -522,7 +522,7 @@ QUESTIONS = [
         "question": "מתבצעת במפרק Eversion- תנועת ה:",
         "options": ["D.I.P jt", "Talo-Crural jt", "Knee jt", "Subtalar jt"],
         "answer": 3,
-        "anatomy_components": ["DIP Joint", "Knee Joint", "Subtalar Joint"],
+        "anatomy_components": ["DIP Joint", "Knee Joint", "Subtalar Joint", "Talocrural Joint"],
     },
     {
         "id": 52,
@@ -607,7 +607,12 @@ QUESTIONS = [
             "Patello-femoral jt",
         ],
         "answer": 1,
-        "anatomy_components": ["Acromioclavicular Joint", "Patellofemoral Joint", "Sternoclavicular Joint"],
+        "anatomy_components": [
+            "Acromioclavicular Joint",
+            "Glenohumeral Joint",
+            "Patellofemoral Joint",
+            "Sternoclavicular Joint",
+        ],
     },
     {
         "id": 59,
@@ -621,7 +626,7 @@ QUESTIONS = [
         "question": "מפרק C.M.C 1 הוא מפרק מסוג:",
         "options": ["Gliding", "Pivot", "Saddle", "Ball & Socket"],
         "answer": 2,
-        "anatomy_components": [],
+        "anatomy_components": ["CMC 1 Joint"],
     },
     {
         "id": 61,
@@ -635,7 +640,7 @@ QUESTIONS = [
         "question": "איזו רצועה מבין הבאות היא הפגיעה ביותר במפרק הקרסול?",
         "options": ["Deltoid Ligament", "Glenohumeral Ligament", "A.T.F.L", "P.C.L"],
         "answer": 2,
-        "anatomy_components": ["Deltoid", "PCL", "Tensor Fasciae Latae"],
+        "anatomy_components": ["Deltoid", "Deltoid Ligament", "Glenohumeral Ligament", "PCL", "Tensor Fasciae Latae"],
     },
     {
         "id": 63,
