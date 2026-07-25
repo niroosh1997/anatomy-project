@@ -12,8 +12,8 @@ Licence spread across the 58 image files used:
 - CC BY 3.0: 2
 - CC0: 1
 
-Two files were modified by whitening a flat background colour so they matched the
-other renders; both are marked *(background whitened)* in the author column, as
+Three files were modified by whitening a flat background colour so they matched the
+other renders; these are marked *(background whitened)* in the author column, as
 CC BY-SA requires indicating that changes were made. No anatomical content was altered.
 
 | Used for | File | Author | Licence | Source |
@@ -41,12 +41,12 @@ CC BY-SA requires indicating that changes were made. No anatomical content was a
 | Greater Trochanter | `gray243.png` | Henry Vandyke Carter | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Gray243.png) |
 | Hamstrings | `hamstrings.png` | BodyParts3D/Anatomography | CC BY-SA 2.1 jp | [Commons](https://commons.wikimedia.org/wiki/File:Hamstrings.gif) |
 | Hip Joint | `blausen-0488-hipanatomy.png` | BruceBlaus | CC BY 3.0 | [Commons](https://commons.wikimedia.org/wiki/File:Blausen_0488_HipAnatomy.png) |
-| Iliopsoas | `gray430-en.png` | Jmarchn | CC BY-SA 3.0 | [Commons](https://commons.wikimedia.org/wiki/File:Gray430-en.svg) |
+| Iliopsoas | `anterior-hip-muscles-2.png` | Beth ohara | CC BY-SA 3.0 | [Commons](https://commons.wikimedia.org/wiki/File:Anterior_Hip_Muscles_2.PNG) |
 | Internal Oblique | `gray395.png` | Henry Vandyke Carter | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Gray395.png) |
 | LCL | `gray348.png` | Henry Vandyke Carter | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Gray348.png) |
 | Latissimus Dorsi | `latissimus-dorsi-muscle-back.png` | Anatomography (background whitened) | CC BY-SA 2.1 jp | [Commons](https://commons.wikimedia.org/wiki/File:Latissimus_dorsi_muscle_back.png) |
 | MCL, PCL | `knee-medial-view.png` | National Institute of Arthritis and Musculoskeletal and Skin Diseases (NIAMS) | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Knee_medial_view.gif) |
-| Obturator Internus | `posterior-hip-muscles-1.png` | Beth ohara~commonswiki | CC BY-SA 3.0 | [Commons](https://commons.wikimedia.org/wiki/File:Posterior_Hip_Muscles_1.PNG) |
+| Obturator Internus | `posterior-hip-muscles-1.png` | Beth ohara | CC BY-SA 3.0 | [Commons](https://commons.wikimedia.org/wiki/File:Posterior_Hip_Muscles_1.PNG) |
 | Patella | `anterioraspectofrightpatella.png` | John Doe | CC0 | [Commons](https://commons.wikimedia.org/wiki/File:AnteriorAspectOfRightPatella.png) |
 | Patellofemoral Joint | `knee-diagram.png` | Mysid | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Knee_diagram.svg) |
 | Pectoralis Major | `gray410.png` | Henry Vandyke Carter | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Gray410.png) |

@@ -161,10 +161,11 @@ export const anatomyImages: Record<string, AnatomyImage> = {
     source: 'https://commons.wikimedia.org/wiki/File:Blausen_0488_HipAnatomy.png',
   },
   Iliopsoas: {
-    src: '/anatomy/gray430-en.png',
-    author: 'Jmarchn',
+    src: '/anatomy/anterior-hip-muscles-2.png',
+    author: 'Beth ohara',
     license: 'CC BY-SA 3.0',
-    source: 'https://commons.wikimedia.org/wiki/File:Gray430-en.svg',
+    source: 'https://commons.wikimedia.org/wiki/File:Anterior_Hip_Muscles_2.PNG',
+    note: 'Iliopsoas is not one muscle but two acting together: psoas major and iliacus, both labelled at the top of this anterior view of the hip.',
   },
   'Internal Oblique': {
     src: '/anatomy/gray395.png',
@@ -192,7 +193,7 @@ export const anatomyImages: Record<string, AnatomyImage> = {
   },
   'Obturator Internus': {
     src: '/anatomy/posterior-hip-muscles-1.png',
-    author: 'Beth ohara~commonswiki',
+    author: 'Beth ohara',
     license: 'CC BY-SA 3.0',
     source: 'https://commons.wikimedia.org/wiki/File:Posterior_Hip_Muscles_1.PNG',
   },
