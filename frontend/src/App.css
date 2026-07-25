@@ -9,6 +9,64 @@
   padding: 2em;
 }
 
+.progress {
+  margin: 0 0 0.75rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #64748b;
+}
+
+.score {
+  margin: 0;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #1e293b;
+}
+
+.score-percent {
+  margin: 0.25rem 0 0;
+  font-size: 1.1rem;
+  color: #64748b;
+}
+
+.review {
+  margin-top: 2rem;
+  text-align: left;
+}
+
+.review h3 {
+  font-size: 1rem;
+  text-align: center;
+  color: #334155;
+}
+
+.review-item {
+  padding: 1rem 0;
+  border-top: 1px solid #e2e8f0;
+}
+
+.review-line {
+  margin: 0.3rem 0;
+  font-size: 0.9rem;
+}
+
+.review-label {
+  color: #64748b;
+}
+
+.review-wrong {
+  color: #c62828;
+  font-weight: 600;
+}
+
+.review-right {
+  color: #2e7d32;
+  font-weight: 600;
+}
+
 .question {
   font-size: 1.25rem;
   font-weight: 500;

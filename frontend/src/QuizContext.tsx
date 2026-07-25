@@ -3,7 +3,7 @@ import { createContext, useContext, useEffect, useState, type ReactNode } from '
 // Set at build time by the deploy workflow; falls back to the local dev server.
 const API_BASE = import.meta.env.VITE_API_BASE ?? 'http://localhost:8000'
 
-interface QuestionData {
+export interface QuestionData {
   id: number
   question: string
   options: string[]
@@ -15,54 +15,102 @@ interface AnswerResult {
   correct_answer: number
 }
 
+export interface AnsweredQuestion {
+  question: QuestionData
+  selected: number
+  result: AnswerResult
+}
+
+type Phase = 'loading' | 'answering' | 'finished'
+
 interface QuizContextValue {
-  question: QuestionData | null
+  phase: Phase
+  current: QuestionData | null
   selected: number | null
   result: AnswerResult | null
-  loading: boolean
-  loadQuestion: () => void
+  questionNumber: number
+  total: number
+  isLastQuestion: boolean
+  score: number
+  misses: AnsweredQuestion[]
   submitAnswer: (index: number) => void
+  next: () => void
+  startQuiz: () => void
 }
 
 const QuizContext = createContext<QuizContextValue | null>(null)
 
 export function QuizProvider({ children }: { children: ReactNode }) {
-  const [question, setQuestion] = useState<QuestionData | null>(null)
+  const [questions, setQuestions] = useState<QuestionData[]>([])
+  const [answered, setAnswered] = useState<AnsweredQuestion[]>([])
+  const [currentIndex, setCurrentIndex] = useState(0)
   const [selected, setSelected] = useState<number | null>(null)
   const [result, setResult] = useState<AnswerResult | null>(null)
-  const [loading, setLoading] = useState(true)
+  const [phase, setPhase] = useState<Phase>('loading')
 
-  const loadQuestion = () => {
-    setLoading(true)
+  const startQuiz = () => {
+    setPhase('loading')
+    setAnswered([])
+    setCurrentIndex(0)
     setSelected(null)
     setResult(null)
-    fetch(`${API_BASE}/questions/random`)
+    fetch(`${API_BASE}/quiz`)
       .then((res) => res.json())
-      .then((data: QuestionData) => setQuestion(data))
-      .finally(() => setLoading(false))
+      .then((data: QuestionData[]) => {
+        setQuestions(data)
+        setPhase('answering')
+      })
   }
 
   useEffect(() => {
-    loadQuestion()
+    startQuiz()
   }, [])
 
+  const current = questions[currentIndex] ?? null
+
   const submitAnswer = (index: number) => {
-    if (result || !question) return
+    if (result || !current) return
     setSelected(index)
-    fetch(`${API_BASE}/questions/${question.id}/answer`, {
+    fetch(`${API_BASE}/questions/${current.id}/answer`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ selected: index }),
     })
       .then((res) => res.json())
-      .then((data: AnswerResult) => setResult(data))
+      .then((data: AnswerResult) => {
+        setResult(data)
+        // Recorded here rather than in next(), so the score is already correct
+        // if the user navigates away to an anatomy page before advancing.
+        setAnswered((prev) => [...prev, { question: current, selected: index, result: data }])
+      })
   }
 
-  return (
-    <QuizContext.Provider value={{ question, selected, result, loading, loadQuestion, submitAnswer }}>
-      {children}
-    </QuizContext.Provider>
-  )
+  const next = () => {
+    setSelected(null)
+    setResult(null)
+    if (currentIndex + 1 >= questions.length) {
+      setPhase('finished')
+    } else {
+      setCurrentIndex((i) => i + 1)
+    }
+  }
+
+  const value: QuizContextValue = {
+    phase,
+    current,
+    selected,
+    result,
+    questionNumber: currentIndex + 1,
+    total: questions.length,
+    isLastQuestion: questions.length > 0 && currentIndex + 1 === questions.length,
+    score: answered.filter((a) => a.result.correct).length,
+    misses: answered.filter((a) => !a.result.correct),
+    submitAnswer,
+    next,
+    startQuiz,
+  }
+
+  return <QuizContext.Provider value={value}>{children}</QuizContext.Provider>
 }
 
 export function useQuiz() {
