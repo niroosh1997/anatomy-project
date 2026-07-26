@@ -350,7 +350,7 @@ QUESTIONS = [
             "Tibialis Anterior בעלייה על קצות הבהונות השריר שעובד הוא",
         ],
         "answer": 1,
-        "anatomy_components": ["Deltoid Ligament", "MTP 1 Joint", "Tibialis Anterior"],
+        "anatomy_components": ["Ankle Joint", "Deltoid Ligament", "MTP 1 Joint", "Tibialis Anterior"],
     },
     {
         "id": 34,
@@ -646,7 +646,7 @@ QUESTIONS = [
         "question": "איזו רצועה מבין הבאות היא הפגיעה ביותר במפרק הקרסול?",
         "options": ["Deltoid Ligament", "Glenohumeral Ligament", "A.T.F.L", "P.C.L"],
         "answer": 2,
-        "anatomy_components": ["ATFL", "Deltoid Ligament", "Glenohumeral Ligament", "PCL"],
+        "anatomy_components": ["ATFL", "Ankle Joint", "Deltoid Ligament", "Glenohumeral Ligament", "PCL"],
     },
     {
         "id": 63,
