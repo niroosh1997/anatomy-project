@@ -297,7 +297,13 @@ QUESTIONS = [
             "Sternocleidomastoid",
         ],
         "answer": 0,
-        "anatomy_components": ["Latissimus Dorsi", "Sternocleidomastoid", "Teres Major", "Trapezius"],
+        "anatomy_components": [
+            "Latissimus Dorsi",
+            "Levator Scapulae",
+            "Sternocleidomastoid",
+            "Teres Major",
+            "Trapezius",
+        ],
     },
     {
         "id": 28,
@@ -351,14 +357,14 @@ QUESTIONS = [
         "question": "Coracoid Process - מי מהבאים נאחז ב?",
         "options": ["Long head of biceps", "Triceps", "Short head of biceps", "Deltoid"],
         "answer": 2,
-        "anatomy_components": ["Coracoid Process", "Deltoid", "Triceps"],
+        "anatomy_components": ["Biceps Brachii", "Coracoid Process", "Deltoid", "Triceps"],
     },
     {
         "id": 35,
         "question": "מי מהבאים יודע לבצע סופינציה?",
         "options": ["Biceps Brachii", "Bracioradialis", "Pronator", "Brachialis"],
         "answer": 0,
-        "anatomy_components": ["Biceps Brachii", "Brachialis", "Brachioradialis"],
+        "anatomy_components": ["Biceps Brachii", "Brachialis", "Brachioradialis", "Pronator Teres"],
     },
     {
         "id": 36,
