@@ -3,11 +3,11 @@
 Every anatomical image in `frontend/public/anatomy/` comes from Wikimedia Commons.
 They are stored locally so the app does not depend on any external host.
 
-Licence spread across the 109 image files used:
+Licence spread across the 110 image files used:
 
 - CC BY-SA 2.1 jp: 46
 - Public domain: 40
-- CC BY-SA 3.0: 12
+- CC BY-SA 3.0: 13
 - CC BY 3.0: 5
 - CC BY-SA 4.0: 3
 - CC0: 3
@@ -16,6 +16,9 @@ Some files were adjusted so they read clearly at display size — a flat backgro
 whitened, a muscle tinted for emphasis, a single frame taken from a rotating render,
 a panel cropped from a multi-part figure, or simply downscaled. No anatomical content
 was altered.
+
+One component (Glenohumeral Ligament) still has no image: Commons had nothing usable
+that was not an MRI, a surgical photo, or a photo of a live person.
 
 | Used for | File | Author | Licence | Source |
 |---|---|---|---|---|
@@ -113,6 +116,7 @@ was altered.
 | Vastus Medialis | `r1-vastus-medialis.png` | BodyParts3D/Anatomography | CC BY-SA 2.1 jp | [Commons](https://commons.wikimedia.org/wiki/File:Vastus_medialis.gif) |
 | Rectus Femoris | `r1-rectus-femoris.png` | BodyParts3D/Anatomography | CC BY-SA 2.1 jp | [Commons](https://commons.wikimedia.org/wiki/File:Rectus_femoris_3D.gif) |
 | Iliotibial Band | `c-itb-gray430-en.png` | Jmarchn, after Henry Vandyke Carter (Gray\'s Anatomy plate 430) | CC BY-SA 3.0 | [Commons](https://commons.wikimedia.org/wiki/File:Gray430-en.svg) |
+| MTP 1 Joint | `articulationes-metatarsophalangeae.png` | Jmarchn, after File:Ospied.svg | CC BY-SA 3.0 | [Commons](https://commons.wikimedia.org/wiki/File:Articulationes_metatarsophalangeae-la.svg) |
 | Medial Meniscus | `c-medial-meniscus-gray349.png` | Henry Vandyke Carter (Gray\'s Anatomy plate 349) | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Gray349.png) |
 | Knee Joint | `c-knee-joint-917.png` | OpenStax College (Anatomy & Physiology) | CC BY 3.0 | [Commons](https://commons.wikimedia.org/wiki/File:917_Knee_Joint.jpg) |
 | Ilium | `c-ilium-lateral.png` | BodyParts3D, made by Database Center for Life Science (DBCLS), via Anatomography | CC BY-SA 2.1 jp | [Commons](https://commons.wikimedia.org/wiki/File:Ilium_02_lateral_view.png) |

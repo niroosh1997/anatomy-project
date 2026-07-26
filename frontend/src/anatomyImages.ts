@@ -610,6 +610,13 @@ export const anatomyImages: Record<string, AnatomyImage> = {
     license: 'CC BY-SA 3.0',
     source: 'https://commons.wikimedia.org/wiki/File:Gray430-en.svg',
   },
+  'MTP 1 Joint': {
+    src: '/anatomy/articulationes-metatarsophalangeae.png',
+    author: 'Jmarchn, after File:Ospied.svg',
+    license: 'CC BY-SA 3.0',
+    source: 'https://commons.wikimedia.org/wiki/File:Articulationes_metatarsophalangeae-la.svg',
+    note: 'The orange band marks the metatarsophalangeal joint line, where the metatarsals (yellow) meet the proximal phalanges (green). MTP 1 is the joint of the big toe, at digit I on the left. Labels are in Latin: metatarsi = metatarsals, phalanges proximales = proximal phalanges.',
+  },
   'Medial Meniscus': {
     src: '/anatomy/c-medial-meniscus-gray349.png',
     author: 'Henry Vandyke Carter (Gray\'s Anatomy plate 349)',
