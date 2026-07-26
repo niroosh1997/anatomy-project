@@ -30,3 +30,6 @@ __pycache__
 
 # Course PDFs — source material, not for a public repo
 *.pdf
+
+# Agent worktrees (scratch, never committed)
+.claude/worktrees/
