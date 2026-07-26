@@ -1,6 +1,7 @@
 import AnatomyLinks from './AnatomyLinks'
 import { useQuiz } from './QuizContext'
 import QuizResults from './QuizResults'
+import { textDirection } from './textDirection'
 
 function Question() {
   const {
@@ -38,8 +39,8 @@ function Question() {
       {/* The questions are Hebrew with embedded Latin anatomy terms. The page
           itself is English (LTR), so without an explicit base direction the
           bidi algorithm lays the runs out left-to-right and scrambles the
-          sentence order. Options are mixed Hebrew/Latin, so let each one
-          pick its own direction. */}
+          sentence order. Options are mixed Hebrew/Latin, so each one gets the
+          direction implied by whether it contains Hebrew at all. */}
       <p className="question" dir="rtl">
         {current.question}
       </p>
@@ -47,7 +48,7 @@ function Question() {
         {current.options.map((option, index) => (
           <button
             key={index}
-            dir="auto"
+            dir={textDirection(option)}
             className={optionClassName(index)}
             onClick={() => submitAnswer(index)}
             disabled={Boolean(result)}
