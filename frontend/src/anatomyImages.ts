@@ -388,10 +388,11 @@ export const anatomyImages: Record<string, AnatomyImage> = {
     source: 'https://commons.wikimedia.org/wiki/File:Trapezius.png',
   },
   Triceps: {
-    src: '/anatomy/triceps-brachii.png',
-    author: 'Unknown',
-    license: 'CC BY-SA 3.0',
-    source: 'https://commons.wikimedia.org/wiki/File:Triceps_brachii.png',
+    src: '/anatomy/triceps-brachii-muscle06.png',
+    author: 'BodyParts3D / DBCLS (Anatomography), background whitened',
+    license: 'CC BY-SA 2.1 jp',
+    source: 'https://commons.wikimedia.org/wiki/File:Triceps_brachii_muscle06.png',
+    note: 'Posterior view with the three heads coloured separately: long head in red, lateral head in yellow, medial head in green. Only the long head crosses the shoulder, which is why it can extend the shoulder as well as the elbow.',
   },
   'Extensor Digitorum': {
     src: '/anatomy/extensor-digitorum-muscle.png',
