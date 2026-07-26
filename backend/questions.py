@@ -22,6 +22,9 @@
 #             limb 110-127, 97504 ankle/foot 128-145, 97505 abdomen/back/neck
 #             146-161. Every question restates something a slide states; slides
 #             the lecturer marked "אין צורך לזכור בע"פ" were left alone.
+#             96 is missing on purpose: it asked for a wrist ligament off one of
+#             those opted-out slides. The ids either side of it are unchanged
+#             rather than closed up, so the ranges above still read true.
 QUESTIONS = [
     {
         "id": 1,
@@ -1014,24 +1017,6 @@ QUESTIONS = [
         "options": ["Palmar Flexion", "Ulnar Deviation", "Pronation", "Dorsi Flexion"],
         "answer": 2,
         "anatomy_components": ["Radiocarpal Joint"],
-    },
-    {
-        "id": 96,
-        "question": "איזו רצועה מהבאות שייכת למפרק שורש כף היד?",
-        "options": [
-            "Coracohumeral Ligament",
-            "Deltoid Ligament",
-            "Annular Ligament",
-            "Palmar Radiocarpal Ligament",
-        ],
-        "answer": 3,
-        "anatomy_components": [
-            "Annular Ligament",
-            "Coracohumeral Ligament",
-            "Deltoid Ligament",
-            "Palmar Radiocarpal Ligament",
-            "Radiocarpal Joint",
-        ],
     },
     {
         "id": 97,

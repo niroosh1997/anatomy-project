@@ -687,10 +687,6 @@ export const anatomyData: Record<string, AnatomyEntry> = {
     type: 'ligament',
     connects: 'The tendon of palmaris longus to the fascia of the palm of the hand; it is the insertion of palmaris longus.',
   },
-  'Palmar Radiocarpal Ligament': {
-    type: 'ligament',
-    connects: 'The palmar surface of the radius to the carpal bones; one of the ligaments of the wrist (radiocarpal) joint.',
-  },
   'Pubofemoral Ligament': {
     type: 'ligament',
     connects: 'An anterior hip ligament running from the pubis to the intertrochanteric line of the femur; it limits excess abduction and extension of the hip.',
