@@ -1,5 +1,6 @@
 import AnatomyLinks from './AnatomyLinks'
 import { useQuiz } from './QuizContext'
+import { textDirection } from './textDirection'
 
 function QuizResults() {
   const { score, total, misses, startQuiz } = useQuiz()
@@ -24,13 +25,16 @@ function QuizResults() {
               </p>
               <p className="review-line">
                 <span className="review-label">You answered</span>{' '}
-                <span className="review-wrong" dir="auto">
+                <span className="review-wrong" dir={textDirection(question.options[selected])}>
                   {question.options[selected]}
                 </span>
               </p>
               <p className="review-line">
                 <span className="review-label">Correct answer</span>{' '}
-                <span className="review-right" dir="auto">
+                <span
+                  className="review-right"
+                  dir={textDirection(question.options[result.correct_answer])}
+                >
                   {question.options[result.correct_answer]}
                 </span>
               </p>
