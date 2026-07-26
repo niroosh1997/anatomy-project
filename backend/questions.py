@@ -300,6 +300,7 @@ QUESTIONS = [
         "anatomy_components": [
             "Latissimus Dorsi",
             "Levator Scapulae",
+            "Rhomboid",
             "Sternocleidomastoid",
             "Teres Major",
             "Trapezius",
@@ -310,7 +311,7 @@ QUESTIONS = [
         "question": "clavicle - בחלק הלטרלי של ה origin למי מהשרירים הבאים?",
         "options": ["Rhomboids", "Deltoid", "Pectoralis Major", "Latissimus Dorsi"],
         "answer": 1,
-        "anatomy_components": ["Clavicle", "Deltoid", "Latissimus Dorsi", "Pectoralis Major"],
+        "anatomy_components": ["Clavicle", "Deltoid", "Latissimus Dorsi", "Pectoralis Major", "Rhomboid"],
     },
     {
         "id": 29,
@@ -625,7 +626,7 @@ QUESTIONS = [
         "question": "לאיזה שריר מהבאים יש Insrtion בעצם ה- Radius?",
         "options": ["Brachialis", "Rhomboids", "Triceps", "Biceps Brachii"],
         "answer": 3,
-        "anatomy_components": ["Biceps Brachii", "Brachialis", "Radius", "Triceps"],
+        "anatomy_components": ["Biceps Brachii", "Brachialis", "Radius", "Rhomboid", "Triceps"],
     },
     {
         "id": 60,
@@ -680,6 +681,7 @@ QUESTIONS = [
         "anatomy_components": [
             "Adductor Brevis",
             "Gluteus Medius",
+            "Rhomboid",
             "Serratus Anterior",
             "Soleus",
             "Tibialis Anterior",
