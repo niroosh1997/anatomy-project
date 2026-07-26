@@ -257,6 +257,204 @@ export const anatomyData: Record<string, AnatomyEntry> = {
     action: 'Pronates the forearm; assists elbow flexion.',
   },
 
+  'Abductor Pollicis Longus': {
+    type: 'muscle',
+    origin: 'Posterior diaphysis of the radius and ulna, and the interosseous membrane.',
+    insertion: 'Base of the 1st metacarpal of the thumb.',
+    action: 'Abduction of the thumb at the C.M.C joint and extension of the thumb at the C.M.C joint.',
+  },
+  'Adductor Magnus': {
+    type: 'muscle',
+    origin: 'Pubis, and also from the ischium.',
+    insertion: 'Linea aspera of the femur.',
+    action: 'Adduction at the hip joint; because of its ischial attachment it also assists hip extension.',
+  },
+  'Biceps Femoris': {
+    type: 'muscle',
+    origin: 'Ischial tuberosity (long head) and linea aspera (short head).',
+    insertion: 'Head of the fibula.',
+    action: 'Knee flexion, hip extension (long head only) and external rotation at the knee. The most lateral of the three Hamstring muscles.',
+  },
+  'Erector Spinae': {
+    type: 'muscle',
+    origin: 'Sacrum and iliac crest.',
+    insertion: 'Along the length of the vertebral column, as three columns: Spinalis (medial), Longissimus (middle) and Iliocostalis (lateral).',
+    action: 'Extension of the spine, side flexion, and anterior pelvic tilt (A.P.T).',
+  },
+  'Extensor Carpi Radialis Brevis': {
+    type: 'muscle',
+    origin: 'Lateral epicondyle of the humerus.',
+    insertion: 'Base of the 3rd metacarpal.',
+    action: 'Extension of the wrist and radial deviation.',
+  },
+  'Extensor Carpi Radialis Longus': {
+    type: 'muscle',
+    origin: 'Just above the lateral epicondyle of the humerus.',
+    insertion: 'Base of the 2nd metacarpal.',
+    action: 'Extension of the wrist and radial deviation.',
+  },
+  'Extensor Carpi Ulnaris': {
+    type: 'muscle',
+    origin: 'Lateral epicondyle of the humerus.',
+    insertion: 'Base of the 5th metacarpal.',
+    action: 'Extension of the wrist and ulnar deviation.',
+  },
+  'Extensor Digiti Minimi': {
+    type: 'muscle',
+    origin: 'Lateral epicondyle of the humerus.',
+    insertion: 'Middle and distal phalanges of the 5th digit.',
+    action: 'Extension of the wrist and extension of the 5th digit at the M.P, P.I.P and D.I.P joints.',
+  },
+  'Extensor Digitorum Longus': {
+    type: 'muscle',
+    origin: 'Anterior surface of the tibia and fibula, and the interosseous membrane.',
+    insertion: 'Middle and distal phalanges of toes 2-5.',
+    action: 'Dorsiflexion at the ankle joint and extension of digits 2-5.',
+  },
+  'Extensor Hallucis Longus': {
+    type: 'muscle',
+    origin: 'Anterior surface of the fibula and the interosseous membrane.',
+    insertion: 'Distal phalanx of the hallux (great toe).',
+    action: 'Dorsiflexion at the ankle joint and extension of the hallux.',
+  },
+  'Extensor Pollicis Brevis': {
+    type: 'muscle',
+    origin: 'Posterior surface of the radial diaphysis and the interosseous membrane.',
+    insertion: 'Base of the proximal phalanx of the thumb.',
+    action: 'Extension of the thumb at the C.M.C joint and at the M.P joint.',
+  },
+  'Extensor Pollicis Longus': {
+    type: 'muscle',
+    origin: 'Posterior surface of the ulnar diaphysis and the interosseous membrane.',
+    insertion: 'Base of the distal phalanx of the thumb.',
+    action: 'Extension of the thumb at the I.P joint and at the M.P and C.M.C joints.',
+  },
+  'Flexor Carpi Radialis': {
+    type: 'muscle',
+    origin: 'Medial epicondyle of the humerus.',
+    insertion: 'Base of the 2nd and 3rd metacarpals.',
+    action: 'Flexion of the wrist and radial deviation.',
+  },
+  'Flexor Digitorum Profundus': {
+    type: 'muscle',
+    origin: 'Ulna and the interosseous membrane.',
+    insertion: 'Base of the distal phalanges of digits 2-5.',
+    action: 'Flexion of the wrist and flexion of the M.P, P.I.P and D.I.P joints of digits 2-5.',
+  },
+  'Flexor Digitorum Superficialis': {
+    type: 'muscle',
+    origin: 'Medial epicondyle of the humerus, coronoid process of the ulna, and the anterior mid-diaphysis of the radius.',
+    insertion: 'Middle phalanges of digits 2-5.',
+    action: 'Flexion of the wrist and flexion of the M.P and P.I.P joints of digits 2-5.',
+  },
+  'Gemellus Superior': {
+    type: 'muscle',
+    origin: 'Ischial spine (Gemellus inferior arises from the ischial tuberosity).',
+    insertion: 'Greater trochanter of the femur — medial surface.',
+    action: 'External rotation at the hip joint.',
+  },
+  Gracilis: {
+    type: 'muscle',
+    origin: 'Pubis.',
+    insertion: 'Medial side of the tibia (pes anserine) — the only adductor that crosses the knee.',
+    action: 'Adduction at the hip joint; assists knee flexion.',
+  },
+  Iliocostalis: {
+    type: 'muscle',
+    origin: 'Sacrum and iliac crest, as the lateral column of the superficial erector spinae.',
+    insertion: 'Along the vertebral column and the ribs, laterally.',
+    action: 'Extension of the spine and side flexion, as part of the erector spinae.',
+  },
+  Multifidus: {
+    type: 'muscle',
+    origin: 'Transverse processes of the vertebrae; the middle layer of the Transversospinalis group.',
+    insertion: 'Spinous processes 3-4 vertebrae above.',
+    action: 'Stabilization of the spine; bilateral extension; unilateral fine rotation between vertebrae.',
+  },
+  Pectineus: {
+    type: 'muscle',
+    origin: 'Pubis.',
+    insertion: 'Linea aspera of the femur (pectineal line).',
+    action: 'Adduction at the hip joint; assists hip flexion. One of the five muscles of the hip adductor group.',
+  },
+  'Peroneus Brevis': {
+    type: 'muscle',
+    origin: 'Lower lateral part of the fibular diaphysis.',
+    insertion: 'Base of the 5th metatarsal, on the plantar side.',
+    action: 'Eversion of the foot; assists plantarflexion at the ankle joint; supports the lateral longitudinal arch.',
+  },
+  Plantaris: {
+    type: 'muscle',
+    origin: 'Lateral condyle of the femur.',
+    insertion: 'Posterior surface of the calcaneus.',
+    action: 'Plantarflexion at the ankle joint.',
+  },
+  Popliteus: {
+    type: 'muscle',
+    origin: 'Lateral condyle of the femur and the lateral meniscus.',
+    insertion: 'Upper posterior surface of the tibia.',
+    action: 'Internal rotation of the knee when the thigh is fixed, knee flexion, and external rotation of the thigh at the knee when the tibia is fixed; it also gives posterior stability to the knee.',
+  },
+  'Quadratus Femoris': {
+    type: 'muscle',
+    origin: 'Lateral part of the ischial tuberosity.',
+    insertion: 'Intertrochanteric crest of the femur.',
+    action: 'External rotation at the hip joint.',
+  },
+  Rotatores: {
+    type: 'muscle',
+    origin: 'Transverse processes of the vertebrae; the deepest layer of the Transversospinalis group.',
+    insertion: 'Spinous processes 1-2 vertebrae above.',
+    action: 'Stabilization of the spine; bilateral extension; unilateral fine rotation between vertebrae.',
+  },
+  Scalene: {
+    type: 'muscle',
+    origin: 'Anterior: C3-C6. Middle: C2-C7. Posterior: C4-C6.',
+    insertion: 'Anterior and middle: rib 1. Posterior: rib 2.',
+    action: 'Bilateral: flexion of the neck. Unilateral: side flexion and rotation to the opposite side (except the posterior scalene).',
+  },
+  Semispinalis: {
+    type: 'muscle',
+    origin: 'Transverse processes of the vertebrae; the most superficial layer of the Transversospinalis group.',
+    insertion: 'Spinous processes 5-6 vertebrae above.',
+    action: 'Stabilization of the spine; bilateral extension; unilateral fine rotation between vertebrae.',
+  },
+  Spinalis: {
+    type: 'muscle',
+    origin: 'Sacrum and iliac crest, as the medial column of the superficial erector spinae.',
+    insertion: 'Along the vertebral column, medially (thoracic region).',
+    action: 'Extension of the spine and side flexion, as part of the erector spinae.',
+  },
+  Splenius: {
+    type: 'muscle',
+    origin: 'Capitis: spinous processes C4-C7 and T1-T3. Cervicis: spinous processes T3-T6.',
+    insertion: 'Capitis: superior nuchal line. Cervicis: transverse processes C1-C3.',
+    action: 'Bilateral: extension of the head. Unilateral: rotation to the same side.',
+  },
+  'Suboccipital Muscles': {
+    type: 'muscle',
+    origin: 'The deepest posterior neck muscles, spanning the upper cervical vertebrae to the occiput: Rectus capitis posterior major and minor, and Oblique capitis superior and inferior.',
+    insertion: 'Base of the occiput and the upper cervical vertebrae.',
+    action: 'Positioning and stabilization of the head on the neck: bilateral extension, with unilateral rotation (rectus capitis posterior major, oblique capitis inferior) and side flexion (oblique capitis superior and inferior).',
+  },
+  Transversospinalis: {
+    type: 'muscle',
+    origin: 'Transverse processes of the vertebrae; the deep group of the back extensors.',
+    insertion: 'Spinous processes of the vertebrae above, comprising Semispinalis (spanning 5-6 vertebrae), Multifidus (3-4) and Rotatores (1-2).',
+    action: 'Stabilization of the vertebral column; bilateral extension; unilateral fine rotation between vertebrae.',
+  },
+  'Vastus Intermedius': {
+    type: 'muscle',
+    origin: 'Anterior two thirds of the femur.',
+    insertion: 'Tibial tuberosity (through the quadriceps and patellar tendons).',
+    action: 'Extension at the knee joint. One of the four heads of the Quadriceps.',
+  },
+  'Vastus Lateralis': {
+    type: 'muscle',
+    origin: 'Posterolateral part of the femur.',
+    insertion: 'Tibial tuberosity (through the quadriceps and patellar tendons).',
+    action: 'Extension at the knee joint. One of the four heads of the Quadriceps.',
+  },
   // Joints
   'Ankle Joint': {
     type: 'joint',
@@ -379,6 +577,62 @@ export const anatomyData: Record<string, AnatomyEntry> = {
     actions: ['Flexion', 'Extension', 'Slight internal/external rotation when flexed'],
   },
 
+  'Elbow Joint': {
+    type: 'joint',
+    bones: ['Humerus', 'Radius', 'Ulna'],
+    jointType: 'Synovial',
+    classification: 'Hinge (humeroulnar and humeroradial articulations)',
+    axis: 'Uniaxial',
+    actions: ['Flexion in the sagittal plane', 'Extension in the sagittal plane'],
+  },
+  'Intercarpal Joint': {
+    type: 'joint',
+    bones: ['Carpal bones of the proximal row', 'Carpal bones of the distal row'],
+    jointType: 'Synovial',
+    classification: 'Plane (gliding)',
+    axis: 'Non-axial',
+    actions: ['Small gliding movements between the individual carpal bones, contributing to overall wrist mobility'],
+  },
+  'MP Joint': {
+    type: 'joint',
+    bones: ['Metacarpal bones', 'Proximal phalanges'],
+    jointType: 'Synovial',
+    classification: 'M.P 2–5: Condyloid; M.P 1: Hinge',
+    axis: 'M.P 2-5: biaxial; M.P 1: uniaxial',
+    actions: ['Flexion', 'Extension', 'Abduction (digits 2-5)', 'Adduction (digits 2-5)'],
+  },
+  'Sacroiliac Joint': {
+    type: 'joint',
+    bones: ['Sacrum', 'Ilium'],
+    jointType: 'Synovial anteriorly, fibrous posteriorly',
+    classification: 'Plane (gliding), reinforced by strong ligaments',
+    axis: 'Minimal movement; the sacrum nutates and counternutates',
+    actions: ['Nutation', 'Counternutation'],
+  },
+  'Scapulothoracic Joint': {
+    type: 'joint',
+    bones: ['Scapula', 'Posterior rib cage (thorax)'],
+    jointType: 'Functional — not a true synovial joint',
+    classification: 'Gliding',
+    axis: 'Non-axial',
+    actions: ['Elevation', 'Depression', 'Retraction', 'Protraction', 'Upward Rotation', 'Downward Rotation', 'Anterior Tilt'],
+  },
+  'Tarsometatarsal Joint': {
+    type: 'joint',
+    bones: ['Tarsal bones', 'Metatarsal bones'],
+    jointType: 'Synovial',
+    classification: 'Plane (gliding)',
+    axis: 'Non-axial',
+    actions: ['Gliding between the tarsal bones and the bases of the five metatarsals'],
+  },
+  'Transverse Tarsal Joint': {
+    type: 'joint',
+    bones: ['Talus', 'Navicular', 'Calcaneus', 'Cuboid'],
+    jointType: 'Synovial',
+    classification: 'Plane (gliding)',
+    axis: 'Non-axial',
+    actions: ['Assists inversion', 'Assists eversion'],
+  },
   // Ligaments
   MCL: {
     type: 'ligament',
@@ -401,6 +655,70 @@ export const anatomyData: Record<string, AnatomyEntry> = {
       'Wraps around the head of the radius and attaches to the anterior and posterior margins of the radial notch of the ulna — holds the radial head against the ulna, permitting pronation/supination.',
   },
 
+  CFL: {
+    type: 'ligament',
+    connects: 'The calcaneofibular ligament is one of the three lateral collateral ligaments of the ankle (Ankle L.C.L), running from the lateral malleolus of the fibula down to the lateral surface of the calcaneus, and it resists inversion of the foot.',
+  },
+  'Coracoacromial Ligament': {
+    type: 'ligament',
+    connects: 'Runs from the coracoid process to the acromion of the scapula, roofing the head of the humerus. It blocks upward jamming of the humerus against the acromion.',
+  },
+  'Coracoclavicular Ligament': {
+    type: 'ligament',
+    connects: 'Connects the coracoid process of the scapula to the clavicle. It has two parts: the trapezoid ligament, which pulls the clavicle down against the pull of the trapezius, and the conoid ligament, which lies medial to it.',
+  },
+  'Interosseous Membrane': {
+    type: 'ligament',
+    connects: 'The shafts of the radius and the ulna. It serves as an additional origin for the deep forearm muscles, including flexor digitorum profundus, flexor pollicis longus, extensor indicis, extensor pollicis longus and brevis, and abductor pollicis longus.',
+  },
+  'Ischiofemoral Ligament': {
+    type: 'ligament',
+    connects: 'A posterior hip ligament running from the posterior part of the acetabulum forwards to the intertrochanteric line of the femur; it limits excess internal rotation and extension of the hip.',
+  },
+  'Long Plantar Ligament': {
+    type: 'ligament',
+    connects: 'The long plantar ligament runs along the sole from the calcaneus to the cuboid and on to the metatarsal bone, and it supports the arches of the foot.',
+  },
+  PTFL: {
+    type: 'ligament',
+    connects: 'The posterior talofibular ligament is one of the three lateral collateral ligaments of the ankle (Ankle L.C.L), running from the posterior aspect of the lateral malleolus of the fibula to the posterior part of the talus.',
+  },
+  'Palmar Aponeurosis': {
+    type: 'ligament',
+    connects: 'The tendon of palmaris longus to the fascia of the palm of the hand; it is the insertion of palmaris longus.',
+  },
+  'Palmar Radiocarpal Ligament': {
+    type: 'ligament',
+    connects: 'The palmar surface of the radius to the carpal bones; one of the ligaments of the wrist (radiocarpal) joint.',
+  },
+  'Pubofemoral Ligament': {
+    type: 'ligament',
+    connects: 'An anterior hip ligament running from the pubis to the intertrochanteric line of the femur; it limits excess abduction and extension of the hip.',
+  },
+  'Sacrospinous Ligament': {
+    type: 'ligament',
+    connects: 'A posterior pelvic ligament running from the sacrum to the ischial spine, helping to stabilise the sacroiliac joint.',
+  },
+  'Sacrotuberous Ligament': {
+    type: 'ligament',
+    connects: 'A posterior pelvic ligament running from the sacrum to the ischial tuberosity, helping to stabilise the sacroiliac joint.',
+  },
+  'Short Plantar Ligament': {
+    type: 'ligament',
+    connects: 'The short plantar ligament is a deep ligament of the sole connecting the calcaneus to the cuboid, supporting the lateral longitudinal arch.',
+  },
+  'Spring Ligament': {
+    type: 'ligament',
+    connects: 'The spring ligament (plantar calcaneo-navicular ligament) runs from the calcaneus to the navicular on the plantar side of the foot; it is a key support of the medial longitudinal arch and is also taught as an additional important ligament of the medial side of the ankle.',
+  },
+  'Transverse Acetabular Ligament': {
+    type: 'ligament',
+    connects: 'Bridges the inferior notch of the acetabulum and is continuous with the acetabular labrum, completing the socket of the hip joint.',
+  },
+  'Transverse Humeral Ligament': {
+    type: 'ligament',
+    connects: 'Bridges the bicipital groove between the greater and lesser tubercles of the humerus, holding the tendon of the long head of the biceps brachii in place.',
+  },
   // Bones / landmarks
   'Greater Trochanter': {
     type: 'bone',
@@ -696,5 +1014,113 @@ export const anatomyData: Record<string, AnatomyEntry> = {
   'Subacromial Bursa': {
     type: 'bone',
     description: 'A sac lying between the acromion and coracoacromial arch above and the supraspinatus tendon and shoulder joint capsule below, continuous laterally with the subdeltoid bursa (the two are usually a single subacromial-subdeltoid bursa). It cushions the rotator cuff as it passes under the arch during abduction; when it is inflamed or compressed the result is subacromial impingement, with a painful arc typically between about 60 and 120 degrees of abduction.',
+  },
+  ASIS: {
+    type: 'bone',
+    description: 'Anterior Superior Iliac Spine — the prominent bony point at the front of the iliac crest. It is the origin of both Sartorius and Tensor Fascia Latae.',
+  },
+  'Arcuate Line': {
+    type: 'bone',
+    description: 'The arcuate line of Douglas, the lower edge of the posterior rectus sheath. Above it the aponeuroses of the Internal Oblique and Transverse Abdominis pass behind the Rectus Abdominis; below it all three aponeuroses pass in front of it, leaving only transversalis fascia behind.',
+  },
+  Calcaneus: {
+    type: 'bone',
+    description: 'The heel bone and the largest tarsal bone. It forms the subtalar joint with the talus and the calcaneo-cuboid part of the transverse tarsal joint, receives gastrocnemius, soleus and plantaris on its posterior surface, and is the posterior pillar of both longitudinal arches.',
+  },
+  Cuboid: {
+    type: 'bone',
+    description: 'A tarsal bone on the lateral side of the foot, between the calcaneus and the 4th-5th metatarsals. It belongs to the lateral longitudinal arch and to the transverse arch, and is bound to the calcaneus by the short and long plantar ligaments.',
+  },
+  Fibula: {
+    type: 'bone',
+    description: 'The slender lateral bone of the lower leg. Its distal end takes part in the talo-crural (ankle) joint together with the tibia and talus, and it gives origin to the peroneal muscles, extensor hallucis longus, flexor hallucis longus and part of soleus.',
+  },
+  Hamate: {
+    type: 'bone',
+    description: 'A carpal bone of the distal row of the wrist, together with the trapezium, trapezoid and capitate.',
+  },
+  'Head of Fibula': {
+    type: 'bone',
+    description: 'The expanded proximal end of the fibula on the lateral side of the knee. It forms the proximal tibiofibular joint with the tibia and is the insertion of Biceps Femoris.',
+  },
+  'Iliac Crest': {
+    type: 'bone',
+    description: 'The upper border of the ilium. Insertion of the External Oblique and origin of the Internal Oblique, Transverse Abdominis, Erector Spinae and Quadratus Lumborum.',
+  },
+  'Ischial Tuberosity': {
+    type: 'bone',
+    description: 'The thickened lower part of the ischium that carries the body weight in sitting. It is the origin of the Hamstring muscles (long head of Biceps Femoris, Semimembranosus, Semitendinosus) and of Gemellus Inferior, and the attachment of the sacrotuberous ligament.',
+  },
+  'Lateral Epicondyle': {
+    type: 'bone',
+    description: 'Bony prominence on the lateral side of the distal humerus. It is the common origin (Common Extensor) of most of the wrist and finger extensors.',
+  },
+  'Lateral Meniscus': {
+    type: 'bone',
+    description: 'A fibrocartilage ring lying on the lateral tibial plateau of the knee. Together with the medial meniscus it absorbs shock, prevents friction, improves the fit between the femoral condyles and the tibial plateau and distributes the synovial fluid; it also gives partial origin to Popliteus.',
+  },
+  'Lesser Tubercle': {
+    type: 'bone',
+    description: 'A bony prominence on the anterior aspect of the proximal humerus, medial to the bicipital groove. It is the insertion of the subscapularis, the only rotator cuff muscle that does not attach to the greater tubercle.',
+  },
+  'Linea Alba': {
+    type: 'bone',
+    description: 'A collagenous connective-tissue band running from the lower end of the sternum to the pubic bones. All four abdominal muscles attach to it.',
+  },
+  'Mastoid Process': {
+    type: 'bone',
+    description: 'A bony process of the temporal bone at the base of the skull, behind the ear. Insertion of the Sternocleidomastoid.',
+  },
+  'Medial Epicondyle': {
+    type: 'bone',
+    description: 'Bony prominence on the medial side of the distal humerus. It is the common origin (Common Flexor) of most of the wrist and finger flexors.',
+  },
+  'Metatarsal Bones': {
+    type: 'bone',
+    description: 'The five long bones of the metatarsus (1-5), each with a base, a body and a head. Their bases articulate with the tarsal bones and with one another, and their heads articulate with the proximal phalanges at the M.T.P joints.',
+  },
+  Navicular: {
+    type: 'bone',
+    description: 'A tarsal bone on the medial side of the foot, between the talus and the cuneiforms. It belongs to the medial longitudinal arch, receives the tendon of tibialis posterior, and is joined to the calcaneus by the spring (plantar calcaneo-navicular) ligament.',
+  },
+  Phalanges: {
+    type: 'bone',
+    description: 'The toe bones: proximal, middle and distal in toes 2-5, and proximal and distal only in the hallux. Each has a base, body and head; they meet the metatarsals at the M.T.P joints and one another at the P.I.P and D.I.P joints.',
+  },
+  Pisiform: {
+    type: 'bone',
+    description: 'A carpal bone of the proximal row of the wrist, together with the scaphoid, lunate and triquetrum.',
+  },
+  Pubis: {
+    type: 'bone',
+    description: 'The anterior part of the coxa (hip bone), meeting its counterpart at the pubic symphysis. It is the common origin of the hip adductor group, the attachment of the pubofemoral ligament, the origin of the Rectus Abdominis, and the lower attachment of the Linea Alba.',
+  },
+  Sacrum: {
+    type: 'bone',
+    description: 'The triangular bone at the base of the spine, wedged between the two iliac bones. Its articular surfaces form the sacroiliac joints, and it is the attachment site of the sacroiliac, sacrotuberous and sacrospinous ligaments and the origin of Piriformis and part of Gluteus Maximus.',
+  },
+  Sternum: {
+    type: 'bone',
+    description: 'The breastbone. Its xiphoid end takes the insertion of the Rectus Abdominis, and its manubrium is an origin of the Sternocleidomastoid.',
+  },
+  'Subdeltoid Bursa': {
+    type: 'bone',
+    description: 'A bursa separating the deltoid muscle from the head of the humerus, reducing friction as the arm moves. Laterally it is usually continuous with the subacromial bursa.',
+  },
+  'Superior Nuchal Line': {
+    type: 'bone',
+    description: 'A ridge on the back of the occipital bone. Insertion of the Splenius Capitis.',
+  },
+  Talus: {
+    type: 'bone',
+    description: 'A tarsal bone sitting between the tibia and fibula above and the calcaneus below. It participates in the talo-crural joint, the subtalar joint and the talo-navicular part of the transverse tarsal joint, and it is one of the bones of the medial longitudinal arch.',
+  },
+  'Tarsal Bones': {
+    type: 'bone',
+    description: 'The bones of the root of the foot: calcaneus, talus, navicular, cuboid and the three cuneiforms (lateral, middle, medial). They meet each other in gliding joints and meet the metatarsals at the tarsal-metatarsal joints.',
+  },
+  'Thoracolumbar Fascia': {
+    type: 'bone',
+    description: 'A broad fascial sheet over the lower back that serves as the origin of the Internal Oblique and the Transverse Abdominis.',
   },
 }
