@@ -1,13 +1,25 @@
 import os
 import random
+import time
+import uuid
+from contextlib import asynccontextmanager
 
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
+import db
 from questions import QUESTIONS
 
-app = FastAPI()
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    await db.connect()
+    yield
+    await db.disconnect()
+
+
+app = FastAPI(lifespan=lifespan)
 
 # Comma-separated origins, set by the deployment; defaults to the Vite dev server.
 # Origins only — scheme + host + port, no trailing path.
@@ -27,6 +39,35 @@ app.add_middleware(
 
 # How many questions make up one round.
 QUIZ_LENGTH = 10
+
+
+def client_id_of(request: Request) -> str | None:
+    """The caller's anonymous browser id, or None if absent or malformed.
+
+    Validated here rather than at insert time: client_id is a uuid column, so
+    letting arbitrary header text through would just produce a failed write.
+    """
+    raw = request.headers.get("x-client-id", "")
+    try:
+        return str(uuid.UUID(raw))
+    except ValueError:
+        return None
+
+
+@app.middleware("http")
+async def log_requests(request: Request, call_next):
+    started = time.perf_counter()
+    response = await call_next(request)
+    if db.enabled():
+        db.record_request(
+            client_id_of(request),
+            request.method,
+            request.url.path,
+            response.status_code,
+            int((time.perf_counter() - started) * 1000),
+            request.headers.get("user-agent"),
+        )
+    return response
 
 
 class QuestionPublic(BaseModel):
@@ -62,11 +103,22 @@ def new_quiz():
 
 
 @app.post("/questions/{question_id}/answer", response_model=AnswerResult)
-def answer_question(question_id: int, submission: AnswerSubmission):
+async def answer_question(question_id: int, submission: AnswerSubmission, request: Request):
+    # async, not sync: a sync endpoint runs in a threadpool with no event loop,
+    # and the background log write needs one. Nothing here blocks.
     question = next((q for q in QUESTIONS if q["id"] == question_id), None)
     if question is None:
         raise HTTPException(status_code=404, detail="Question not found")
-    return AnswerResult(
-        correct=submission.selected == question["answer"],
-        correct_answer=question["answer"],
-    )
+    correct = submission.selected == question["answer"]
+    if db.enabled():
+        # anatomy_components is copied in rather than referenced: the component
+        # lists live in questions.py, not the database, so without this column
+        # "which body parts get failed most" is not answerable in SQL.
+        db.record_answer(
+            client_id_of(request),
+            question_id,
+            submission.selected,
+            correct,
+            question["anatomy_components"],
+        )
+    return AnswerResult(correct=correct, correct_answer=question["answer"])

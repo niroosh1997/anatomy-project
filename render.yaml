@@ -19,3 +19,8 @@ services:
       # Matches the local venv that requirements.txt was pinned against.
       - key: PYTHON_VERSION
         value: 3.11.4
+      # Neon connection string. sync: false means Render prompts for the value
+      # in its dashboard and it is never stored in this repo, which is public.
+      # Leave it unset and the API runs exactly as before, with logging off.
+      - key: DATABASE_URL
+        sync: false
