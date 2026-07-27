@@ -26,7 +26,7 @@ app.add_middleware(
 
 
 # How many questions make up one round.
-QUIZ_LENGTH = 10
+QUIZ_LENGTH = 20
 
 
 class QuestionPublic(BaseModel):
