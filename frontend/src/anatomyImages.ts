@@ -161,7 +161,7 @@ export const anatomyImages: Record<string, AnatomyImage> = {
     note: 'Both feet from the lateral side. The calcaneus is the red heel bone.',
   },
   CFL: {
-    src: '/anatomy/cfl.png',
+    src: '/anatomy/lateral-ankle-ligaments.png',
     author: 'Laboratoires Servier',
     license: 'CC BY-SA 3.0',
     source: 'https://commons.wikimedia.org/wiki/File%3ALateral_collateral_ligament_of_ankle_joint.png',
@@ -606,7 +606,7 @@ export const anatomyImages: Record<string, AnatomyImage> = {
     note: 'Transverse section of the anterior abdominal wall; the linea alba is the midline fibrous seam between the two rectus muscles, labelled at centre.',
   },
   'Long Plantar Ligament': {
-    src: '/anatomy/long-plantar-ligament.png',
+    src: '/anatomy/plantar-ligaments-gray358.png',
     author: 'Henry Vandyke Carter',
     license: 'Public domain',
     source: 'https://commons.wikimedia.org/wiki/File%3AGray358.png',
@@ -842,7 +842,7 @@ export const anatomyImages: Record<string, AnatomyImage> = {
     source: 'https://commons.wikimedia.org/wiki/File:Psoas_major.gif',
   },
   PTFL: {
-    src: '/anatomy/ptfl.png',
+    src: '/anatomy/lateral-ankle-ligaments.png',
     author: 'Laboratoires Servier',
     license: 'CC BY-SA 3.0',
     source: 'https://commons.wikimedia.org/wiki/File%3ALateral_collateral_ligament_of_ankle_joint.png',
@@ -930,14 +930,14 @@ export const anatomyImages: Record<string, AnatomyImage> = {
     source: 'https://commons.wikimedia.org/wiki/File%3ASacroiliac_Joint.png',
   },
   'Sacrospinous Ligament': {
-    src: '/anatomy/sacrospinous-ligament.png',
+    src: '/anatomy/sacrotuberous-sacrospinous-gray320.png',
     author: 'Henry Vandyke Carter',
     license: 'Public domain',
     source: 'https://commons.wikimedia.org/wiki/File%3AGray320.png',
     note: 'Posterior view of the right half of the pelvis; the sacrospinous ligament is labelled on the right, running from the sacrum to the ischial spine, deep to the sacrotuberous ligament.',
   },
   'Sacrotuberous Ligament': {
-    src: '/anatomy/sacrotuberous-ligament.png',
+    src: '/anatomy/sacrotuberous-sacrospinous-gray320.png',
     author: 'Henry Vandyke Carter',
     license: 'Public domain',
     source: 'https://commons.wikimedia.org/wiki/File%3AGray320.png',
@@ -1000,7 +1000,7 @@ export const anatomyImages: Record<string, AnatomyImage> = {
     source: 'https://commons.wikimedia.org/wiki/File:Serratus_anterior_muscles_lateral.png',
   },
   'Short Plantar Ligament': {
-    src: '/anatomy/short-plantar-ligament.png',
+    src: '/anatomy/plantar-ligaments-gray358.png',
     author: 'Henry Vandyke Carter',
     license: 'Public domain',
     source: 'https://commons.wikimedia.org/wiki/File%3AGray358.png',
@@ -1031,7 +1031,7 @@ export const anatomyImages: Record<string, AnatomyImage> = {
     source: 'https://commons.wikimedia.org/wiki/File%3AMusculus_splenius_capitis_et_cervicis_marked.png',
   },
   'Spring Ligament': {
-    src: '/anatomy/spring-ligament.png',
+    src: '/anatomy/plantar-ligaments-gray358.png',
     author: 'Henry Vandyke Carter',
     license: 'Public domain',
     source: 'https://commons.wikimedia.org/wiki/File%3AGray358.png',
