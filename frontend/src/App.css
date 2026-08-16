@@ -187,3 +187,67 @@
 .anatomy-figure figcaption a {
   color: #64748b;
 }
+
+/* Course picker ---------------------------------------------------------- */
+
+.home-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.home-link:hover {
+  text-decoration: underline;
+}
+
+.course-heading {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.courses {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.course {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 1em 1.2em;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  text-decoration: none;
+  color: inherit;
+  background-color: #f8fafc;
+}
+
+.course:hover {
+  background-color: #eef2ff;
+  border-color: #c7d2fe;
+}
+
+/* A course with no questions yet is listed but not clickable, so the list
+   shows what the syllabus will cover without offering an empty round. */
+.course.empty {
+  opacity: 0.55;
+  background-color: transparent;
+  cursor: not-allowed;
+}
+
+.course.empty:hover {
+  background-color: transparent;
+  border-color: #e2e8f0;
+}
+
+.course-name {
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.course-count {
+  font-size: 0.85rem;
+  color: #64748b;
+}

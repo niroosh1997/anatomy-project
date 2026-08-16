@@ -21,7 +21,16 @@ export interface AnsweredQuestion {
   result: AnswerResult
 }
 
-type Phase = 'loading' | 'answering' | 'finished'
+export interface CourseData {
+  slug: string
+  name: string
+  name_he: string
+  question_count: number
+}
+
+// 'empty' is its own phase rather than a finished round of zero: a course with
+// no material yet needs to say so, not congratulate you on a perfect score.
+type Phase = 'loading' | 'answering' | 'finished' | 'empty'
 
 interface QuizContextValue {
   phase: Phase
@@ -40,7 +49,7 @@ interface QuizContextValue {
 
 const QuizContext = createContext<QuizContextValue | null>(null)
 
-export function QuizProvider({ children }: { children: ReactNode }) {
+export function QuizProvider({ course, children }: { course: string; children: ReactNode }) {
   const [questions, setQuestions] = useState<QuestionData[]>([])
   const [answered, setAnswered] = useState<AnsweredQuestion[]>([])
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -54,17 +63,19 @@ export function QuizProvider({ children }: { children: ReactNode }) {
     setCurrentIndex(0)
     setSelected(null)
     setResult(null)
-    fetch(`${API_BASE}/quiz`)
+    fetch(`${API_BASE}/quiz?course=${encodeURIComponent(course)}`)
       .then((res) => res.json())
       .then((data: QuestionData[]) => {
         setQuestions(data)
-        setPhase('answering')
+        setPhase(data.length === 0 ? 'empty' : 'answering')
       })
   }
 
+  // Keyed on course so switching courses deals a fresh round rather than
+  // leaving the previous course's questions on screen.
   useEffect(() => {
     startQuiz()
-  }, [])
+  }, [course])
 
   const current = questions[currentIndex] ?? null
 

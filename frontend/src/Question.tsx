@@ -27,6 +27,14 @@ function Question() {
     return <QuizResults />
   }
 
+  if (phase === 'empty') {
+    return (
+      <div className="card">
+        <p className="question">This course has no questions yet.</p>
+      </div>
+    )
+  }
+
   if (phase === 'loading' || !current) {
     return <p>Loading quiz...</p>
   }
