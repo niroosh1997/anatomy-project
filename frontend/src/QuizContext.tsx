@@ -1,5 +1,6 @@
-import { createContext, useContext, useEffect, useState, type ReactNode } from 'react'
+import { createContext, useContext, useEffect, useRef, useState, type ReactNode } from 'react'
 import { clientId } from './clientId'
+import { clearRound, loadRound, ROUND_VERSION, saveRound } from './roundStorage'
 
 // Set at build time by the deploy workflow; falls back to the local dev server.
 const API_BASE = import.meta.env.VITE_API_BASE ?? 'http://localhost:8000'
@@ -11,7 +12,7 @@ export interface QuestionData {
   anatomy_components: string[]
 }
 
-interface AnswerResult {
+export interface AnswerResult {
   correct: boolean
   correct_answer: number
 }
@@ -58,7 +59,12 @@ export function QuizProvider({ course, children }: { course: string; children: R
   const [result, setResult] = useState<AnswerResult | null>(null)
   const [phase, setPhase] = useState<Phase>('loading')
 
+  // Blocks the save effect until a restore has been attempted, so the initial
+  // empty state can't overwrite a good saved round before it is read back.
+  const restored = useRef(false)
+
   const startQuiz = () => {
+    clearRound()
     setPhase('loading')
     setAnswered([])
     setCurrentIndex(0)
@@ -75,27 +81,86 @@ export function QuizProvider({ course, children }: { course: string; children: R
   }
 
   // Keyed on course so switching courses deals a fresh round rather than
-  // leaving the previous course's questions on screen.
+  // leaving the previous course's questions on screen. A reload lands here too,
+  // and picks the round back up where it was rather than starting over.
   useEffect(() => {
-    startQuiz()
+    restored.current = false
+    const saved = loadRound(course)
+    if (saved) {
+      setQuestions(saved.questions)
+      setAnswered(saved.answered)
+      setCurrentIndex(saved.currentIndex)
+      setSelected(saved.selected)
+      setResult(saved.result)
+      setPhase(saved.phase)
+      restored.current = true
+    } else {
+      startQuiz()
+    }
   }, [course])
+
+  // Write after every change rather than on unload: a phone can discard the tab
+  // without ever firing an unload event, and beforeunload is unreliable on iOS.
+  useEffect(() => {
+    if (phase !== 'answering' && phase !== 'finished') return
+    if (!restored.current && questions.length === 0) return
+    restored.current = true
+    saveRound({
+      v: ROUND_VERSION,
+      course,
+      questions,
+      answered,
+      currentIndex,
+      selected,
+      result,
+      phase,
+    })
+  }, [course, questions, answered, currentIndex, selected, result, phase])
+
+  // Dropping a removed question shortens the round, which can leave the index
+  // past the end. Without this the view has no current question and sits on
+  // "Loading quiz..." forever.
+  useEffect(() => {
+    if (phase === 'answering' && currentIndex >= questions.length) {
+      setPhase('finished')
+    }
+  }, [phase, currentIndex, questions.length])
 
   const current = questions[currentIndex] ?? null
 
   const submitAnswer = (index: number) => {
     if (result || !current) return
+    const asked = current
     setSelected(index)
-    fetch(`${API_BASE}/questions/${current.id}/answer`, {
+    fetch(`${API_BASE}/questions/${asked.id}/answer`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'X-Client-Id': clientId() },
       body: JSON.stringify({ selected: index }),
     })
-      .then((res) => res.json())
-      .then((data: AnswerResult) => {
+      .then((res) => {
+        // A saved round outlives deploys, so it can still hold a question that
+        // has since been removed from the bank. Without this the 404 body parses
+        // into a result with undefined fields, and the question renders as wrong
+        // with no correct answer marked.
+        if (res.status === 404) {
+          setQuestions((prev) => prev.filter((q) => q.id !== asked.id))
+          setSelected(null)
+          return null
+        }
+        if (!res.ok) throw new Error(`answer failed: ${res.status}`)
+        return res.json() as Promise<AnswerResult>
+      })
+      .then((data) => {
+        if (!data) return
         setResult(data)
         // Recorded here rather than in next(), so the score is already correct
         // if the user navigates away to an anatomy page before advancing.
-        setAnswered((prev) => [...prev, { question: current, selected: index, result: data }])
+        setAnswered((prev) => [...prev, { question: asked, selected: index, result: data }])
+      })
+      .catch(() => {
+        // Network blip or server error: re-enable the options so the answer can
+        // be given again, rather than leaving the round stuck on a dead button.
+        setSelected(null)
       })
   }
 
