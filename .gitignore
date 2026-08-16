@@ -28,8 +28,10 @@ venv
 __pycache__
 *.pyc
 
-# Course PDFs — source material, not for a public repo
+# Course material — source documents, not for a public repo
 *.pdf
+*.docx
+*.DOCX
 
 # Agent worktrees (scratch, never committed)
 .claude/worktrees/
