@@ -1,3 +1,4 @@
+import logging
 import os
 import random
 import time
@@ -10,6 +11,12 @@ from pydantic import BaseModel
 
 import db
 from questions import QUESTIONS
+
+# Uvicorn configures its own loggers but leaves the root logger alone, so
+# without this Python's fallback handler drops anything below WARNING — which
+# would hide "access log: connected, schema ready" while still showing the
+# failure. Setup is much easier to diagnose when success is visible too.
+logging.basicConfig(level=logging.INFO, format="%(levelname)s:    %(name)s: %(message)s")
 
 
 @asynccontextmanager
