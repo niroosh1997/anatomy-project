@@ -30,6 +30,7 @@ __pycache__
 
 # Course material — source documents, not for a public repo
 *.pdf
+*.PDF
 *.docx
 *.DOCX
 
