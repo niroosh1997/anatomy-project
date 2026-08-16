@@ -1,4 +1,5 @@
 import { createContext, useContext, useEffect, useState, type ReactNode } from 'react'
+import { clientId } from './clientId'
 
 // Set at build time by the deploy workflow; falls back to the local dev server.
 const API_BASE = import.meta.env.VITE_API_BASE ?? 'http://localhost:8000'
@@ -54,7 +55,7 @@ export function QuizProvider({ children }: { children: ReactNode }) {
     setCurrentIndex(0)
     setSelected(null)
     setResult(null)
-    fetch(`${API_BASE}/quiz`)
+    fetch(`${API_BASE}/quiz`, { headers: { 'X-Client-Id': clientId() } })
       .then((res) => res.json())
       .then((data: QuestionData[]) => {
         setQuestions(data)
@@ -73,7 +74,7 @@ export function QuizProvider({ children }: { children: ReactNode }) {
     setSelected(index)
     fetch(`${API_BASE}/questions/${current.id}/answer`, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: { 'Content-Type': 'application/json', 'X-Client-Id': clientId() },
       body: JSON.stringify({ selected: index }),
     })
       .then((res) => res.json())
