@@ -121,17 +121,25 @@ group by device;
 
 ## Rounds started vs finished
 
-Each `GET /quiz` is a round started; every ten answers is roughly one finished.
+Each `GET /quiz` is a round started; a full round is `QUIZ_LENGTH` answers
+(currently 20).
+
+`method = 'GET'` matters. Rows written before preflights were excluded include
+`OPTIONS /quiz` — the browser asking permission before the real call — and
+counting those inflates the round count. It reported 5 rounds when 3 had been
+played.
 
 ```sql
-select (select count(*) from request_log where path = '/quiz')      as rounds_started,
+select (select count(*) from request_log
+          where path = '/quiz' and method = 'GET')                  as rounds_started,
        (select count(*) from answer_log)                            as answers_given,
        round((select count(*) from answer_log)::numeric
-             / nullif((select count(*) from request_log where path = '/quiz'), 0), 1)
+             / nullif((select count(*) from request_log
+                         where path = '/quiz' and method = 'GET'), 0), 1)
                                                                     as answers_per_round;
 ```
 
-`answers_per_round` well below 10 means people are abandoning rounds partway.
+`answers_per_round` well below 20 means people are abandoning rounds partway.
 
 ## Is anything broken or slow
 
@@ -162,3 +170,21 @@ delete from request_log where ts < now() - interval '90 days';
 ```
 
 `answer_log` is the valuable history and is far smaller. Keep it.
+
+### Clearing the noise already recorded
+
+Health checks and preflights are no longer written, but rows from before that
+are still there — they were about 90% of the table. Removing them makes the
+traffic queries above accurate for the whole history:
+
+```sql
+delete from request_log where path = '/health' or method = 'OPTIONS';
+```
+
+Check what it will remove before running it:
+
+```sql
+select path, method, count(*) from request_log
+where path = '/health' or method = 'OPTIONS'
+group by path, method order by count(*) desc;
+```

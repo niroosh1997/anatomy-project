@@ -61,11 +61,28 @@ def client_id_of(request: Request) -> str | None:
         return None
 
 
+# Render probes this every ~4.4 seconds to check the service is alive. Logging
+# it produced ~670k rows a month of noise that crowded out the real traffic and
+# would have filled the free tier for nothing.
+UNLOGGED_PATHS = {"/health"}
+
+
+def worth_logging(request: Request) -> bool:
+    """Whether this request represents a person using the app.
+
+    OPTIONS is the browser's CORS preflight, sent before the real call because
+    X-Client-Id is a custom header. Preflights never carry custom headers, so
+    logging them added a client_id-less row alongside every genuine one --
+    doubling request counts and making preflights look like extra quiz rounds.
+    """
+    return request.method != "OPTIONS" and request.url.path not in UNLOGGED_PATHS
+
+
 @app.middleware("http")
 async def log_requests(request: Request, call_next):
     started = time.perf_counter()
     response = await call_next(request)
-    if db.enabled():
+    if db.enabled() and worth_logging(request):
         db.record_request(
             client_id_of(request),
             request.method,
