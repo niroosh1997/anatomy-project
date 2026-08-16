@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { clientId } from './clientId'
 import type { CourseData } from './QuizContext'
 
 // Set at build time by the deploy workflow; falls back to the local dev server.
@@ -14,7 +15,7 @@ function CoursePicker() {
   const [failed, setFailed] = useState(false)
 
   useEffect(() => {
-    fetch(`${API_BASE}/courses`)
+    fetch(`${API_BASE}/courses`, { headers: { 'X-Client-Id': clientId() } })
       .then((res) => res.json())
       .then(setCourses)
       .catch(() => setFailed(true))

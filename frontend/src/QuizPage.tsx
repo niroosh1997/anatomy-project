@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import Question from './Question'
+import { clientId } from './clientId'
 import { QuizProvider, type CourseData } from './QuizContext'
 
 const API_BASE = import.meta.env.VITE_API_BASE ?? 'http://localhost:8000'
@@ -13,7 +14,7 @@ function QuizPage() {
   // Only for the heading — the round itself is dealt by QuizProvider, which
   // does not need the course to exist before asking for it.
   useEffect(() => {
-    fetch(`${API_BASE}/courses`)
+    fetch(`${API_BASE}/courses`, { headers: { 'X-Client-Id': clientId() } })
       .then((res) => res.json())
       .then((all: CourseData[]) => setMeta(all.find((c) => c.slug === course) ?? null))
       .catch(() => setMeta(null))
