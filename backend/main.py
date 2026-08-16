@@ -10,7 +10,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
 import db
-from questions import QUESTIONS
+from courses import COURSE_OF_QUESTION, COURSES, DEFAULT_COURSE, QUESTIONS_BY_ID
 
 # Uvicorn configures its own loggers but leaves the root logger alone, so
 # without this Python's fallback handler drops anything below WARNING — which
@@ -110,27 +110,56 @@ class AnswerResult(BaseModel):
     correct_answer: int
 
 
+class CoursePublic(BaseModel):
+    slug: str
+    name: str
+    name_he: str
+    question_count: int
+
+
 @app.get("/health")
 def health():
     return {"status": "ok"}
 
 
+@app.get("/courses", response_model=list[CoursePublic])
+def list_courses():
+    """What the picker offers.
+
+    question_count is included so the picker can say which courses have
+    material yet, rather than letting someone start an empty round.
+    """
+    return [
+        CoursePublic(
+            slug=c.slug, name=c.name, name_he=c.name_he, question_count=len(c.questions)
+        )
+        for c in COURSES.values()
+    ]
+
+
 @app.get("/quiz", response_model=list[QuestionPublic])
-def new_quiz():
-    """Deal a round of distinct questions.
+def new_quiz(course: str = DEFAULT_COURSE):
+    """Deal a round of distinct questions from one course.
 
     random.sample rather than repeated random.choice so a round never asks the
-    same question twice. The min() guard keeps this working if the bank ever
-    shrinks below QUIZ_LENGTH — sample raises ValueError when k > population.
+    same question twice. The min() guard keeps this working when a bank holds
+    fewer than QUIZ_LENGTH — sample raises ValueError when k > population, and
+    a course with no material yet deals an empty round rather than failing.
     """
-    return random.sample(QUESTIONS, min(QUIZ_LENGTH, len(QUESTIONS)))
+    if course not in COURSES:
+        raise HTTPException(status_code=404, detail=f"No course named {course!r}")
+    bank = COURSES[course].questions
+    return random.sample(bank, min(QUIZ_LENGTH, len(bank)))
 
 
 @app.post("/questions/{question_id}/answer", response_model=AnswerResult)
 async def answer_question(question_id: int, submission: AnswerSubmission, request: Request):
     # async, not sync: a sync endpoint runs in a threadpool with no event loop,
     # and the background log write needs one. Nothing here blocks.
-    question = next((q for q in QUESTIONS if q["id"] == question_id), None)
+    #
+    # Looked up across every course: the id alone identifies a question, which
+    # courses.py enforces at import time.
+    question = QUESTIONS_BY_ID.get(question_id)
     if question is None:
         raise HTTPException(status_code=404, detail="Question not found")
     correct = submission.selected == question["answer"]
@@ -144,5 +173,6 @@ async def answer_question(question_id: int, submission: AnswerSubmission, reques
             submission.selected,
             correct,
             question["anatomy_components"],
+            COURSE_OF_QUESTION.get(question_id),
         )
     return AnswerResult(correct=correct, correct_answer=question["answer"])
