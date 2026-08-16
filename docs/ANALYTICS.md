@@ -21,6 +21,22 @@ the only course at the time. Treat `coalesce(course, 'anatomy')` as the course
 when counting history, or filter to `course is not null` to look only at the
 period since the picker shipped.
 
+**Times are stored in UTC and the database runs in GMT**, so a bare `ts` reads
+three hours behind Israeli time in summer, two in winter. It is the right
+instant, just displayed in the wrong zone — which matters most when bucketing
+by day, because a GMT midnight cuts the day at 03:00 local and pushes late-night
+answers onto the previous date. The day-by-day queries below convert with
+`at time zone 'Asia/Jerusalem'`; add the same clause to any query of your own
+that groups or displays a timestamp:
+
+```sql
+select ts at time zone 'Asia/Jerusalem' as local_time, * from answer_log
+order by ts desc limit 20;
+```
+
+Rolling windows like `now() - interval '7 days'` need no conversion — they
+measure elapsed time, which is the same in every zone.
+
 ---
 
 ## How each course is going
@@ -94,7 +110,7 @@ Swap `component` for `question_id` to see individual questions instead.
 Score per round is not stored, so this approximates it by day.
 
 ```sql
-select date_trunc('day', ts)::date          as day,
+select date_trunc('day', ts at time zone 'Asia/Jerusalem')::date as day,
        count(*)                             as answers,
        round(100.0 * count(*) filter (where correct) / count(*), 1) as pct_correct
 from answer_log
@@ -118,7 +134,7 @@ from request_log;
 ## Daily active people
 
 ```sql
-select date_trunc('day', ts)::date as day,
+select date_trunc('day', ts at time zone 'Asia/Jerusalem')::date as day,
        count(distinct client_id)   as people,
        count(*)                    as requests
 from request_log
