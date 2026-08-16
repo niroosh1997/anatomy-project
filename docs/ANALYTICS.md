@@ -15,7 +15,26 @@ It is not a login and not personal data. Read every "people" number as an
 **upper bound**: the same person on a phone and a laptop counts twice, and
 clearing site data mints a new id.
 
+`answer_log.course` says which course the question came from. It is **null for
+answers recorded before courses existed** — those are all anatomy, since it was
+the only course at the time. Treat `coalesce(course, 'anatomy')` as the course
+when counting history, or filter to `course is not null` to look only at the
+period since the picker shipped.
+
 ---
+
+## How each course is going
+
+```sql
+select coalesce(course, 'anatomy')          as course,
+       count(*)                             as answers,
+       count(distinct client_id)            as people,
+       count(*) filter (where not correct)  as wrong,
+       round(100.0 * count(*) filter (where not correct) / count(*), 1) as pct_wrong
+from answer_log
+group by 1
+order by answers desc;
+```
 
 ## Which questions are hardest
 

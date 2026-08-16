@@ -10,7 +10,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
 import db
-from courses import COURSES, DEFAULT_COURSE, QUESTIONS_BY_ID
+from courses import COURSE_OF_QUESTION, COURSES, DEFAULT_COURSE, QUESTIONS_BY_ID
 
 # Uvicorn configures its own loggers but leaves the root logger alone, so
 # without this Python's fallback handler drops anything below WARNING — which
@@ -156,5 +156,6 @@ async def answer_question(question_id: int, submission: AnswerSubmission, reques
             submission.selected,
             correct,
             question["anatomy_components"],
+            COURSE_OF_QUESTION.get(question_id),
         )
     return AnswerResult(correct=correct, correct_answer=question["answer"])

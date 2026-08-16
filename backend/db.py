@@ -36,11 +36,19 @@ create table if not exists answer_log (
   question_id        integer  not null,
   selected           smallint not null,
   correct            boolean  not null,
-  anatomy_components text[]
+  anatomy_components text[],
+  course             text
 );
+-- create table if not exists does nothing to a table that already has rows, so
+-- the column is added separately for databases created before courses existed.
+-- Rows written then keep a null course; they are all anatomy, since it was the
+-- only course at the time.
+alter table answer_log add column if not exists course text;
+
 create index if not exists answer_log_ts_idx       on answer_log (ts desc);
 create index if not exists answer_log_question_idx on answer_log (question_id);
 create index if not exists answer_log_client_idx   on answer_log (client_id, ts desc);
+create index if not exists answer_log_course_idx   on answer_log (course, ts desc);
 """
 
 _pool: asyncpg.Pool | None = None
@@ -152,15 +160,22 @@ def record_answer(
     selected: int,
     correct: bool,
     anatomy_components: list[str],
+    course: str | None,
 ) -> None:
+    # course is stored rather than derived from question_id at query time: the
+    # id ranges that separate the courses live in Python, not in the database,
+    # so without this column "how is orthopedics going" needs knowledge SQL
+    # does not have — the same reasoning as anatomy_components above.
     _spawn(
         _write(
-            "insert into answer_log (client_id, question_id, selected, correct, anatomy_components)"
-            " values ($1, $2, $3, $4, $5)",
+            "insert into answer_log"
+            " (client_id, question_id, selected, correct, anatomy_components, course)"
+            " values ($1, $2, $3, $4, $5, $6)",
             client_id,
             question_id,
             selected,
             correct,
             anatomy_components,
+            course,
         )
     )

@@ -45,3 +45,7 @@ for course in COURSES.values():
 QUESTIONS_BY_ID: dict[int, dict] = {
     q["id"]: q for course in COURSES.values() for q in course.questions
 }
+
+# Which course a question belongs to. Built from the same pass that proved the
+# ids unique, so it cannot disagree with QUESTIONS_BY_ID.
+COURSE_OF_QUESTION: dict[int, str] = _seen
