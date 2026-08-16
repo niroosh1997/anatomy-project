@@ -72,6 +72,12 @@ async def connect() -> None:
             # dead one to a writer.
             max_inactive_connection_lifetime=30.0,
             command_timeout=10.0,
+            # Neon's dashboard offers a pooled endpoint (host contains
+            # "-pooler") running PgBouncer in transaction mode, where asyncpg's
+            # prepared statements break. Disabling the statement cache makes
+            # either connection string work; at two small inserts per answer
+            # the lost caching costs nothing.
+            statement_cache_size=0,
         )
         async with _pool.acquire() as conn:
             await conn.execute(SCHEMA)
