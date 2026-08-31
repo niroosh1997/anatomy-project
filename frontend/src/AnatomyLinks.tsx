@@ -1,8 +1,12 @@
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 /** Pills linking to the reference page for each structure a question covers.
  *  Shared by the per-question feedback and the end-of-round review list. */
 function AnatomyLinks({ names, label }: { names: string[]; label: string }) {
+  // Where the reader is now, so the reference page can offer a way back into
+  // this exact round instead of the course picker.
+  const location = useLocation()
+
   if (names.length === 0) return null
 
   return (
@@ -10,7 +14,12 @@ function AnatomyLinks({ names, label }: { names: string[]; label: string }) {
       <p>{label}</p>
       <div className="anatomy-links">
         {names.map((name) => (
-          <Link key={name} to={`/anatomy/${encodeURIComponent(name)}`} className="anatomy-link">
+          <Link
+            key={name}
+            to={`/anatomy/${encodeURIComponent(name)}`}
+            state={{ from: location.pathname }}
+            className="anatomy-link"
+          >
             {name}
           </Link>
         ))}
