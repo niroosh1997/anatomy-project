@@ -1,9 +1,25 @@
-import { Link, useParams } from 'react-router-dom'
+import { Link, useLocation, useParams } from 'react-router-dom'
 import { anatomyData } from './anatomyData'
 import { anatomyImages } from './anatomyImages'
+import { savedRoundCourse } from './roundStorage'
+
+/** Where "back" should lead from a reference page.
+ *
+ *  "/" is the course picker, not the quiz, so linking there drops the reader
+ *  out of the round they were in. Preference order: the page they actually
+ *  came from, then the round still saved in this browser, then the picker.
+ */
+function backTarget(from: string | undefined): { to: string; label: string } {
+  if (from && from.startsWith('/quiz/')) return { to: from, label: 'Back to quiz' }
+  const course = savedRoundCourse()
+  if (course) return { to: `/quiz/${encodeURIComponent(course)}`, label: 'Back to quiz' }
+  return { to: '/', label: 'Back to courses' }
+}
 
 function AnatomyComponentPage() {
   const { name = '' } = useParams<{ name: string }>()
+  const location = useLocation()
+  const back = backTarget((location.state as { from?: string } | null)?.from)
   const decodedName = decodeURIComponent(name)
   const entry = anatomyData[decodedName]
   const image = anatomyImages[decodedName]
@@ -65,8 +81,8 @@ function AnatomyComponentPage() {
         </dl>
       )}
       {entry?.type === 'bone' && <p>{entry.description}</p>}
-      <Link to="/" className="back-link">
-        Back to quiz
+      <Link to={back.to} className="back-link">
+        {back.label}
       </Link>
     </div>
   )

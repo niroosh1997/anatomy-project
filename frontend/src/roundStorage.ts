@@ -78,4 +78,26 @@ export function loadRound(course: string): SavedRound | null {
   }
 }
 
+/** The course of the saved round, if there is a usable one.
+ *
+ *  Used to get back into a round from a reference page opened directly, where
+ *  there is no navigation state saying which quiz it was reached from.
+ */
+export function savedRoundCourse(): string | null {
+  let raw: string | null = null
+  try {
+    raw = localStorage.getItem(STORAGE_KEY)
+  } catch {
+    return null
+  }
+  if (!raw) return null
+
+  try {
+    const r = JSON.parse(raw) as SavedRound
+    return r?.v === VERSION && typeof r.course === 'string' && r.course ? r.course : null
+  } catch {
+    return null
+  }
+}
+
 export { VERSION as ROUND_VERSION }
