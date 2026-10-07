@@ -6,6 +6,7 @@ entry here; nothing in main.py needs to change.
 """
 import questions as anatomy
 import questions_orthopedics as orthopedics
+import questions_physiology as physiology
 
 
 class Course:
@@ -21,6 +22,7 @@ COURSES: dict[str, Course] = {
     for c in (
         Course("anatomy", "Anatomy", "אנטומיה", anatomy.QUESTIONS),
         Course("orthopedics", "Orthopedics", "אורתופדיה", orthopedics.QUESTIONS),
+        Course("physiology", "Physiology", "פיזיולוגיה", physiology.QUESTIONS),
     )
 }
 
